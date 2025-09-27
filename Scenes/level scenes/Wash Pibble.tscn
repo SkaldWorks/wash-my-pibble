@@ -1,3 +1,16 @@
-[gd_scene format=3 uid="uid://bfqk17pxuf27"]
+[gd_scene load_steps=4 format=3 uid="uid://bfqk17pxuf27"]
+
+[ext_resource type="PackedScene" uid="uid://rwyk2nniiv82" path="res://Scenes/mechanic scenes/bubble.tscn" id="1_bjyj3"]
+[ext_resource type="PackedScene" uid="uid://c5hcptap821la" path="res://Scenes/mechanic scenes/disappear.tscn" id="2_xppsa"]
+[ext_resource type="PackedScene" uid="uid://cg71yju0kxc20" path="res://Scenes/mechanic scenes/soap.tscn" id="3_xppsa"]
 
 [node name="WashPibble" type="Node2D"]
+
+[node name="bubble" parent="." instance=ExtResource("1_bjyj3")]
+position = Vector2(408, 280)
+
+[node name="disappear" parent="." instance=ExtResource("2_xppsa")]
+position = Vector2(1378, 477)
+
+[node name="drag" parent="." instance=ExtResource("3_xppsa")]
+position = Vector2(320, 756)

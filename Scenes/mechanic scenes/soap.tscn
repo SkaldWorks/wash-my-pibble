@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fs2ej"]
 size = Vector2(130, 131)
 
-[node name="drag" type="Sprite2D"]
+[node name="soap" type="Sprite2D"]
 texture = ExtResource("1_oqoye")
 script = ExtResource("2_fs2ej")
 

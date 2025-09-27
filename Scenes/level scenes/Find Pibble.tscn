@@ -1,3 +1,19 @@
-[gd_scene format=3 uid="uid://7x4kdlp1t47t"]
+[gd_scene load_steps=3 format=3 uid="uid://7x4kdlp1t47t"]
+
+[ext_resource type="PackedScene" uid="uid://c6qgylqwhxxgx" path="res://Scenes/mechanic scenes/scales.tscn" id="1_q1gdq"]
+[ext_resource type="Script" uid="uid://qomt03qo8qcn" path="res://Scripts/timer.gd" id="2_8jq66"]
 
 [node name="FindPibble" type="Node2D"]
+
+[node name="scales" parent="." instance=ExtResource("1_q1gdq")]
+position = Vector2(986, 534)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+autostart = true
+script = ExtResource("2_8jq66")
+
+[node name="ProgressBar" type="ProgressBar" parent="Timer"]
+offset_right = 1919.0
+offset_bottom = 89.0

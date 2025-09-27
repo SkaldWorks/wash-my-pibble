@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://d44ap6wt78ev"]
+
+[ext_resource type="Texture2D" uid="uid://bxmg1eyhklios" path="res://Sprites/Backgrounds/PhoneRingCG.png" id="1_x1fg5"]
+[ext_resource type="Texture2D" uid="uid://booqcsjl70pth" path="res://Sprites/Props/StillPhoneProp.png" id="2_g2frj"]
+
+[node name="CallToPibble" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_x1fg5")
+
+[node name="StillPhoneProp" type="Sprite2D" parent="."]
+position = Vector2(1562, 885)
+texture = ExtResource("2_g2frj")
