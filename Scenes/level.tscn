@@ -40,8 +40,9 @@ position = Vector2(351, 429)
 [node name="Food" parent="." instance=ExtResource("8_754fn")]
 position = Vector2(480, 531)
 
-[node name="clothes" parent="." instance=ExtResource("10_oqgf2")]
-position = Vector2(882, 578)
-
 [node name="snapTo" parent="." instance=ExtResource("11_qxfql")]
-position = Vector2(1028, 521)
+position = Vector2(1032, 395)
+
+[node name="clothes" parent="." instance=ExtResource("10_oqgf2")]
+position = Vector2(812, 515)
+scale = Vector2(0.415, 0.292442)
