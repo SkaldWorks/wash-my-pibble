@@ -1,3 +1,16 @@
-[gd_scene format=3 uid="uid://bxqydea0jo8j1"]
+[gd_scene load_steps=3 format=3 uid="uid://bxqydea0jo8j1"]
+
+[ext_resource type="PackedScene" uid="uid://cooqh81k00ndx" path="res://Scenes/mechanic scenes/food.tscn" id="2_0nkyv"]
+[ext_resource type="PackedScene" uid="uid://devsg2oahmnr8" path="res://Scenes/mechanic scenes/pibble_eat.tscn" id="2_2a8as"]
 
 [node name="FeedPibble" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PibbleEat" parent="." instance=ExtResource("2_2a8as")]
+position = Vector2(776, 482)
+
+[node name="Food" parent="." instance=ExtResource("2_0nkyv")]
+position = Vector2(410, 804)
