@@ -1,0 +1,28 @@
+[gd_scene load_steps=7 format=3 uid="uid://c0vxgi7wokhwn"]
+
+[ext_resource type="PackedScene" uid="uid://cg71yju0kxc20" path="res://Scenes/drag.tscn" id="1_tumq0"]
+[ext_resource type="PackedScene" uid="uid://c5hcptap821la" path="res://Scenes/disappear.tscn" id="2_k5f4k"]
+[ext_resource type="PackedScene" uid="uid://rwyk2nniiv82" path="res://Scenes/bubble.tscn" id="3_6phgx"]
+[ext_resource type="PackedScene" uid="uid://pbld53ui8eat" path="res://Scenes/pickMeUp.tscn" id="4_wqkje"]
+[ext_resource type="PackedScene" uid="uid://dwr1ycean4gh3" path="res://Scenes/picksUp.tscn" id="5_0f350"]
+[ext_resource type="PackedScene" uid="uid://c6qgylqwhxxgx" path="res://Scenes/scales.tscn" id="6_0f350"]
+
+[node name="Level" type="Node2D"]
+
+[node name="disappear" parent="." instance=ExtResource("2_k5f4k")]
+position = Vector2(144, 139)
+
+[node name="drag" parent="." instance=ExtResource("1_tumq0")]
+position = Vector2(181, 311)
+
+[node name="bubble" parent="." instance=ExtResource("3_6phgx")]
+position = Vector2(280, 145)
+
+[node name="pickMeUp" parent="." instance=ExtResource("4_wqkje")]
+position = Vector2(1016, 328)
+
+[node name="picksUp" parent="." instance=ExtResource("5_0f350")]
+position = Vector2(811, 496)
+
+[node name="scales" parent="." instance=ExtResource("6_0f350")]
+position = Vector2(586, 223)

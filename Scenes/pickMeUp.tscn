@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://pbld53ui8eat"]
+
+[ext_resource type="Texture2D" uid="uid://bjwnel5syjday" path="res://Sprites/icon.svg" id="1_i0piv"]
+[ext_resource type="Script" uid="uid://0h2ha38a0ufj" path="res://Scripts/pickMeUp.gd" id="2_f1o8y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f1o8y"]
+size = Vector2(129, 129)
+
+[node name="pickMeUp" type="Sprite2D"]
+texture = ExtResource("1_i0piv")
+script = ExtResource("2_f1o8y")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_f1o8y")
