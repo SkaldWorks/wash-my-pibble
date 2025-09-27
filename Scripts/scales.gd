@@ -1,40 +1,19 @@
-extends Sprite2D
+extends "res://scripts/draggable.gd"
 
-# Dragging state
-var is_dragging := false
-var mouse_offset := Vector2.ZERO
-
-# Original position and scale to return to
-var original_position := Vector2.ZERO
+@export var min_scale := 0.01
+@export var max_scale := 5.0
+@export var top_y := 100.0
+@export var bottom_y := 800.0
 var original_scale := Vector2.ONE
 
-# Scaling speed factor
-var scale_factor := 0.005  # adjust for sensitivity
-
 func _ready():
-	original_position = position
+	super._ready()
 	original_scale = scale
 
-func _input(event):
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
-		if event.pressed and get_rect().has_point(to_local(event.position)):
-			# Start dragging
-			is_dragging = true
-			mouse_offset = position - event.position
-		elif not event.pressed:
-			# Stop dragging and snap back
-			is_dragging = false
-			position = original_position
-			scale = original_scale
-
-	if event is InputEventMouseMotion and is_dragging:
-		# Move object with mouse
-		position = event.position + mouse_offset
-
-		# Adjust scale based on vertical movement
-		var delta_y = event.relative.y
-		scale += Vector2.ONE * delta_y * scale_factor
-
-		# Clamp scale to reasonable limits
-		scale.x = clamp(scale.x, 0.2, 3.0)
-		scale.y = clamp(scale.y, 0.2, 3.0)
+func _process(_delta):
+	if is_dragging:
+		var t = clamp(inverse_lerp(top_y, bottom_y, position.y), 0.0, 1.0)
+		scale = Vector2.ONE * lerp(min_scale, max_scale, t)
+	else:
+		position = position.lerp(original_position, 0.15)
+		scale = scale.lerp(original_scale, 0.15)

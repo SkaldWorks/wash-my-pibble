@@ -1,29 +1,22 @@
 extends Sprite2D
 
-# Falling state
 var is_falling := false
-var fall_speed := Vector2(0, 0)  # vertical velocity
-var gravity := 400.0  # pixels/sec^2
-var fade_speed := 1.0  # alpha/sec
+var fall_speed := Vector2.ZERO
+@export var gravity := 400.0
+@export var fade_speed := 1.0
 
-func pickup_me():
+func pickup_me() -> void:
 	is_falling = false
 	fall_speed = Vector2.ZERO
-	modulate.a = 1.0  # fully visible
+	modulate.a = 1.0
 
-func release():
+func release() -> void:
 	is_falling = true
 
 func _process(delta):
 	if is_falling:
-		# Apply gravity
 		fall_speed.y += gravity * delta
 		position += fall_speed * delta
-
-		# Fade out
-		modulate.a -= fade_speed * delta
-		modulate.a = clamp(modulate.a, 0, 1)
-
-		# Remove object once invisible
+		modulate.a = clamp(modulate.a - fade_speed * delta, 0, 1)
 		if modulate.a <= 0:
 			queue_free()

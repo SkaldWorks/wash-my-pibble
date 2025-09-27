@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://c0vxgi7wokhwn"]
+[gd_scene load_steps=8 format=3 uid="uid://c0vxgi7wokhwn"]
 
 [ext_resource type="PackedScene" uid="uid://cg71yju0kxc20" path="res://Scenes/drag.tscn" id="1_tumq0"]
 [ext_resource type="PackedScene" uid="uid://c5hcptap821la" path="res://Scenes/disappear.tscn" id="2_k5f4k"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://pbld53ui8eat" path="res://Scenes/pickMeUp.tscn" id="4_wqkje"]
 [ext_resource type="PackedScene" uid="uid://dwr1ycean4gh3" path="res://Scenes/picksUp.tscn" id="5_0f350"]
 [ext_resource type="PackedScene" uid="uid://c6qgylqwhxxgx" path="res://Scenes/scales.tscn" id="6_0f350"]
+[ext_resource type="Texture2D" uid="uid://fr8nnxghiafr" path="res://Sprites/placeholderPibble.png" id="7_8c0lf"]
 
 [node name="Level" type="Node2D"]
 
@@ -26,3 +27,5 @@ position = Vector2(811, 496)
 
 [node name="scales" parent="." instance=ExtResource("6_0f350")]
 position = Vector2(586, 223)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("7_8c0lf")
