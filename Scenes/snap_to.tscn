@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqa85txlahpsg"]
+
+[ext_resource type="Texture2D" uid="uid://fr8nnxghiafr" path="res://Sprites/placeholderPibble.png" id="1_msyic"]
+[ext_resource type="Script" uid="uid://q1uwbish2bq6" path="res://Scripts/snapTo.gd" id="2_ic8d1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ic8d1"]
+size = Vector2(129, 209)
+
+[node name="snapTo" type="Sprite2D"]
+texture = ExtResource("1_msyic")
+script = ExtResource("2_ic8d1")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-3.5, -2.5)
+shape = SubResource("RectangleShape2D_ic8d1")
