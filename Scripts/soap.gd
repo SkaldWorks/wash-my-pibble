@@ -1,6 +1,6 @@
 extends "res://scripts/draggable.gd"
 
-@export var clean_strength := 0.7
+@export var clean_strength := 0.6
 var over_target: Node = null
 
 func _ready():
@@ -11,7 +11,7 @@ func _ready():
 func _drag_to(mouse_pos: Vector2) -> void:
 	super._drag_to(mouse_pos)
 	if over_target:
-		over_target.call_deferred("reduce_dirtiness", clean_strength * get_process_delta_time())
+		over_target.call_deferred("add_bubbles", clean_strength * get_process_delta_time())
 
 func _on_area_entered(area: Area2D) -> void:
 	over_target = area.get_parent()

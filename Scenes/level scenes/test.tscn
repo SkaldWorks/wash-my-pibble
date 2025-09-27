@@ -14,33 +14,33 @@
 [node name="Level" type="Node2D"]
 
 [node name="disappear" parent="." instance=ExtResource("1_84hcm")]
-position = Vector2(144, 139)
+position = Vector2(191, 274)
 
 [node name="drag" parent="." instance=ExtResource("2_glx2u")]
-position = Vector2(181, 311)
+position = Vector2(353, 499)
 
 [node name="bubble" parent="." instance=ExtResource("3_fht3r")]
-position = Vector2(280, 145)
+position = Vector2(518, 277)
 
 [node name="pickMeUp" parent="." instance=ExtResource("4_epgej")]
-position = Vector2(1010, 149)
+position = Vector2(1493.5, 431.158)
 
 [node name="picksUp" parent="." instance=ExtResource("5_xh5fj")]
-position = Vector2(878, 246)
+position = Vector2(1361.5, 528.157)
 
 [node name="scales" parent="." instance=ExtResource("6_y7s2u")]
-position = Vector2(586, 223)
+position = Vector2(1069.5, 505.157)
 scale = Vector2(0.8, 0.8)
 
 [node name="pibbleEat" parent="." instance=ExtResource("7_scgmq")]
-position = Vector2(351, 429)
+position = Vector2(834.5, 711.157)
 
 [node name="Food" parent="." instance=ExtResource("8_hhv5l")]
-position = Vector2(480, 531)
+position = Vector2(963.5, 813.157)
 
 [node name="snapTo" parent="." instance=ExtResource("9_mt2xe")]
-position = Vector2(1032, 395)
+position = Vector2(1515.5, 677.157)
 
 [node name="clothes" parent="." instance=ExtResource("10_ajccv")]
-position = Vector2(812, 515)
+position = Vector2(1295.5, 797.157)
 scale = Vector2(0.415, 0.292442)
