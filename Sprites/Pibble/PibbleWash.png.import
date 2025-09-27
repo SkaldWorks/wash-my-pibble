@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqh8xobkesj1d"
-path="res://.godot/imported/StillPhoneProp.png-206ba58ee82f769ec362db66f3085670.ctex"
+uid="uid://bcpvhdqogh7nn"
+path="res://.godot/imported/PibbleWash.png-734f1fa29bd222c16d2f03b7ec7b9039.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Props/StillPhoneProp.png"
-dest_files=["res://.godot/imported/StillPhoneProp.png-206ba58ee82f769ec362db66f3085670.ctex"]
+source_file="res://Sprites/Pibble/PibbleWash.png"
+dest_files=["res://.godot/imported/PibbleWash.png-734f1fa29bd222c16d2f03b7ec7b9039.ctex"]
 
 [params]
 

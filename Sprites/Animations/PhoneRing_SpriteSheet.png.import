@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqh8xobkesj1d"
-path="res://.godot/imported/StillPhoneProp.png-206ba58ee82f769ec362db66f3085670.ctex"
+uid="uid://c376nw0qbgki0"
+path="res://.godot/imported/PhoneRing_SpriteSheet.png-65922af13529bb6e9cbf391e6b4e1d74.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Props/StillPhoneProp.png"
-dest_files=["res://.godot/imported/StillPhoneProp.png-206ba58ee82f769ec362db66f3085670.ctex"]
+source_file="res://Sprites/Animations/PhoneRing_SpriteSheet.png"
+dest_files=["res://.godot/imported/PhoneRing_SpriteSheet.png-65922af13529bb6e9cbf391e6b4e1d74.ctex"]
 
 [params]
 
