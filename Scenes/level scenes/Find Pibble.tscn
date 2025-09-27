@@ -1,3 +1,30 @@
-[gd_scene format=3 uid="uid://7x4kdlp1t47t"]
+[gd_scene load_steps=5 format=3 uid="uid://7x4kdlp1t47t"]
+
+[ext_resource type="Texture2D" uid="uid://bqxqumscne2xn" path="res://Sprites/Backgrounds/ForestBackground.png" id="1_hevlq"]
+[ext_resource type="PackedScene" uid="uid://c6qgylqwhxxgx" path="res://Scenes/mechanic scenes/scales.tscn" id="1_q1gdq"]
+[ext_resource type="Script" uid="uid://qomt03qo8qcn" path="res://Scripts/timer.gd" id="2_8jq66"]
+[ext_resource type="Texture2D" uid="uid://bmkhiscsqf01k" path="res://Sprites/Props/BushProp.png" id="4_u6a7m"]
 
 [node name="FindPibble" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_hevlq")
+
+[node name="scales" parent="." instance=ExtResource("1_q1gdq")]
+position = Vector2(588, 659)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+autostart = true
+script = ExtResource("2_8jq66")
+
+[node name="ProgressBar" type="ProgressBar" parent="Timer"]
+offset_right = 1919.0
+offset_bottom = 89.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(247, 719)
+texture = ExtResource("4_u6a7m")

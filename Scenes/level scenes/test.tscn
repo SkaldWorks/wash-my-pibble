@@ -1,0 +1,46 @@
+[gd_scene load_steps=11 format=3 uid="uid://6or88kivedin"]
+
+[ext_resource type="PackedScene" uid="uid://c5hcptap821la" path="res://Scenes/mechanic scenes/disappear.tscn" id="1_84hcm"]
+[ext_resource type="PackedScene" uid="uid://cg71yju0kxc20" path="res://Scenes/mechanic scenes/soap.tscn" id="2_glx2u"]
+[ext_resource type="PackedScene" uid="uid://pbld53ui8eat" path="res://Scenes/mechanic scenes/pickMeUp.tscn" id="4_epgej"]
+[ext_resource type="PackedScene" uid="uid://dwr1ycean4gh3" path="res://Scenes/mechanic scenes/picksUp.tscn" id="5_xh5fj"]
+[ext_resource type="PackedScene" uid="uid://c6qgylqwhxxgx" path="res://Scenes/mechanic scenes/scales.tscn" id="6_y7s2u"]
+[ext_resource type="PackedScene" uid="uid://devsg2oahmnr8" path="res://Scenes/mechanic scenes/pibble_eat.tscn" id="7_scgmq"]
+[ext_resource type="PackedScene" uid="uid://cooqh81k00ndx" path="res://Scenes/mechanic scenes/food.tscn" id="8_hhv5l"]
+[ext_resource type="PackedScene" uid="uid://cqa85txlahpsg" path="res://Scenes/mechanic scenes/snap_to.tscn" id="9_mt2xe"]
+[ext_resource type="PackedScene" uid="uid://fq2gdvxbbw26" path="res://Scenes/mechanic scenes/dirt_scrub.tscn" id="10_84hcm"]
+[ext_resource type="PackedScene" uid="uid://bjcis78bmavdh" path="res://Scenes/mechanic scenes/clothes.tscn" id="10_ajccv"]
+
+[node name="Level" type="Node2D"]
+
+[node name="disappear" parent="." instance=ExtResource("1_84hcm")]
+position = Vector2(191, 274)
+
+[node name="drag" parent="." instance=ExtResource("2_glx2u")]
+position = Vector2(353, 499)
+
+[node name="pickMeUp" parent="." instance=ExtResource("4_epgej")]
+position = Vector2(1493.5, 431.158)
+
+[node name="picksUp" parent="." instance=ExtResource("5_xh5fj")]
+position = Vector2(1361.5, 528.157)
+
+[node name="scales" parent="." instance=ExtResource("6_y7s2u")]
+position = Vector2(1069.5, 505.157)
+scale = Vector2(0.8, 0.8)
+
+[node name="pibbleEat" parent="." instance=ExtResource("7_scgmq")]
+position = Vector2(750, 724)
+
+[node name="Food" parent="." instance=ExtResource("8_hhv5l")]
+position = Vector2(963.5, 813.157)
+
+[node name="snapTo" parent="." instance=ExtResource("9_mt2xe")]
+position = Vector2(1515.5, 677.157)
+
+[node name="clothes" parent="." instance=ExtResource("10_ajccv")]
+position = Vector2(1295.5, 797.157)
+scale = Vector2(0.415, 0.292442)
+
+[node name="dirtScrub" parent="." instance=ExtResource("10_84hcm")]
+position = Vector2(135, 499)

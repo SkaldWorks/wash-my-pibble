@@ -36,12 +36,9 @@ func _on_area_entered(area: Area2D) -> void:
 	if parent == self:
 		return
 
-	# Check eater by group membership (simple and flexible)
+	# Check eater by group membership
 	if parent.is_in_group("Eater"):
 		over_eater = parent
-	# Alternative: check for a method on the parent instead of group:
-	# elif parent.has_method("on_eat"):
-	#     over_eater = parent
 
 func _on_area_exited(area: Area2D) -> void:
 	var parent = area.get_parent()
