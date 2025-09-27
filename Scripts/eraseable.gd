@@ -11,4 +11,4 @@ func reduce_dirtiness(amount: float):
 	dirtiness -= amount
 	dirtiness = clamp(dirtiness, 0, 1)
 	if dirtiness <= 0:
-		print("Object cleaned!")
+		pass

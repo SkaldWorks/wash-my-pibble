@@ -7,13 +7,11 @@ var gravity := 400.0  # pixels/sec^2
 var fade_speed := 1.0  # alpha/sec
 
 func pickup_me():
-	print("Picked up!")
 	is_falling = false
 	fall_speed = Vector2.ZERO
 	modulate.a = 1.0  # fully visible
 
 func release():
-	print("Released!")
 	is_falling = true
 
 func _process(delta):

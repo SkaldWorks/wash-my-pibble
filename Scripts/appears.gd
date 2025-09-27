@@ -15,4 +15,4 @@ func reduce_dirtiness(amount: float):
 	soap += amount
 	soap = clamp(soap, 0, 1)
 	if soap >= 1:
-		print("Object soaped!")
+		pass

@@ -13,7 +13,6 @@ func pickup_me():
 	modulate.a = 1.0  # fully visible
 
 func release():
-	print("Released!")
 	is_falling = true
 
 func _process(delta):

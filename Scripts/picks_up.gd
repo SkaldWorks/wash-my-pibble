@@ -12,7 +12,6 @@ var pickup_offset := Vector2(60, -60)
 
 func _ready():
 	$Area2D.area_entered.connect(_on_area_2d_area_entered)
-	$Area2D.area_exited.connect(_on_area_2d_area_exited)
 
 func _input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
@@ -39,7 +38,3 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 	if not picked_object and area.get_parent().has_method("pickup_me"):
 		picked_object = area.get_parent()
 		picked_object.pickup_me()
-
-func _on_area_2d_area_exited(area: Area2D) -> void:
-	# Object stays attached until mouse release
-	pass
