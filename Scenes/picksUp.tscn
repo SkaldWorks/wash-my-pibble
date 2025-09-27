@@ -1,17 +1,19 @@
 [gd_scene load_steps=4 format=3 uid="uid://dwr1ycean4gh3"]
 
-[ext_resource type="Texture2D" uid="uid://bjwnel5syjday" path="res://Sprites/icon.svg" id="1_wmhqd"]
+[ext_resource type="Texture2D" uid="uid://bmhuyiysx3wnf" path="res://Sprites/vecteezy_thumb-forceps-curved-clipart-flat-design-icon-isolated-on_34554904.png" id="1_wmhqd"]
 [ext_resource type="Script" uid="uid://f8lhfw7cn6ou" path="res://Scripts/picks_up.gd" id="2_5k0mc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cfjoo"]
-size = Vector2(127, 135)
+size = Vector2(4100, 4100)
 
 [node name="picksUp" type="Sprite2D"]
+scale = Vector2(0.02, 0.02)
 texture = ExtResource("1_wmhqd")
+flip_h = true
 script = ExtResource("2_5k0mc")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(1.5, 0.5)
+position = Vector2(49.9999, -150)
 shape = SubResource("RectangleShape2D_cfjoo")

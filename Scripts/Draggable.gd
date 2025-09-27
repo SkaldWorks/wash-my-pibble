@@ -3,6 +3,7 @@ extends Sprite2D
 var is_dragging := false
 var mouse_offset := Vector2.ZERO
 var original_position := Vector2.ZERO
+var snap_speed := 8.0 # Higher = faster snap back
 
 func _ready():
 	original_position = position
@@ -23,10 +24,11 @@ func _start_drag(mouse_pos: Vector2) -> void:
 
 func _stop_drag() -> void:
 	is_dragging = false
-	_snap_back()
+	# no need to call _snap_back() here anymore; handled in _process
 
 func _drag_to(mouse_pos: Vector2) -> void:
 	position = mouse_pos + mouse_offset
 
-func _snap_back() -> void:
-	position = original_position
+func _process(delta: float) -> void:
+	if not is_dragging:
+		position = position.lerp(original_position, snap_speed * delta)

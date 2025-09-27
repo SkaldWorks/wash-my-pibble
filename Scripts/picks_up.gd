@@ -5,6 +5,7 @@ var picked_object: Node2D = null
 
 func _ready():
 	$Area2D.area_entered.connect(_on_area_entered)
+	original_position = position  # Important: set the original position for smooth snapping
 
 func _input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
@@ -16,11 +17,14 @@ func _input(event):
 			if picked_object:
 				picked_object.call("release")
 				picked_object = null
+			# snapping will now happen automatically in _process
 
 	if event is InputEventMouseMotion and is_dragging:
 		position = get_global_mouse_position() + mouse_offset
 		if picked_object:
 			picked_object.global_position = global_position + pickup_offset
+		# update original_position to prevent snapping while dragging
+		original_position = position
 
 func _on_area_entered(area: Area2D) -> void:
 	if not picked_object and area.get_parent().has_method("pickup_me"):
