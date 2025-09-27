@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://7x4kdlp1t47t"]
+
+[node name="FindPibble" type="Node2D"]
