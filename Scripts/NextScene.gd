@@ -30,7 +30,7 @@ func _on_pressed() -> void:
 		4:
 			target_scene = "res://Scenes/level scenes/Wash Pibble.tscn"
 		5:
-			target_scene = "res://Scenes/level scenes/Dress Pibble.tscn"
+			target_scene = "res://Scenes/level scenes/Dress_Pibble.tscn"
 		6:
 			target_scene = "res://Scenes/level scenes/Win Screen.tscn"
 	if target_scene != "":

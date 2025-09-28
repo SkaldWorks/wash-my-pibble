@@ -1,16 +1,25 @@
-[gd_scene load_steps=12 format=3 uid="uid://begxv017xcxpe"]
+[gd_scene load_steps=15 format=3 uid="uid://begxv017xcxpe"]
 
 [ext_resource type="Texture2D" uid="uid://itrotfb6jwg5" path="res://Sprites/Backgrounds/DressingRoom.png" id="1_ria6u"]
+[ext_resource type="Texture2D" uid="uid://c2rqt48selbj5" path="res://Sprites/UI/Button_Clothes.png" id="2_7omvv"]
 [ext_resource type="PackedScene" uid="uid://edyejbvfkjwd" path="res://Scenes/mechanic scenes/dress_him.tscn" id="2_fbn8u"]
-[ext_resource type="Texture2D" uid="uid://d1mgg8aou5lw8" path="res://Sprites/UI/Item_Box.png" id="2_q4bhf"]
-[ext_resource type="Texture2D" uid="uid://0m56tkpaaalg" path="res://Sprites/UI/Button_Next.png" id="3_ku6eg"]
 [ext_resource type="Script" uid="uid://b3qw8mvi8kawi" path="res://Scripts/CycleButton.gd" id="4_7omvv"]
 [ext_resource type="PackedScene" uid="uid://b3rjeuecjc4pl" path="res://Scenes/clothing scenes/sweater_pibble.tscn" id="5_d84cy"]
 [ext_resource type="PackedScene" uid="uid://cjc4rhqsjptk0" path="res://Scenes/clothing scenes/ratty_clothes.tscn" id="6_txekd"]
 [ext_resource type="PackedScene" uid="uid://nujtlew1wyxy" path="res://Scenes/clothing scenes/silly_pibble.tscn" id="7_ntprn"]
 [ext_resource type="PackedScene" uid="uid://rjfy3tpw7e6l" path="res://Scenes/clothing scenes/burger.tscn" id="8_uywbw"]
 [ext_resource type="PackedScene" uid="uid://c0hys2lx17qa7" path="res://Scenes/clothing scenes/dead_beat.tscn" id="9_4tq6w"]
+[ext_resource type="PackedScene" uid="uid://bj8dfllpjo3cr" path="res://Scenes/clothing scenes/theEmperor.tscn" id="10_d84cy"]
 [ext_resource type="PackedScene" uid="uid://0ygl7uegampt" path="res://Scenes/clothing scenes/ralsei_pibble.tscn" id="10_gb6hn"]
+[ext_resource type="PackedScene" uid="uid://bg1a67ixsc62h" path="res://Scenes/mechanic scenes/next_scene_button.tscn" id="12_ntprn"]
+[ext_resource type="FontFile" uid="uid://b2ryg2i4xs1vt" path="res://Sprites/UI/Winter Feast.ttf" id="13_uywbw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4tq6w"]
+font = ExtResource("13_uywbw")
+font_size = 69
+font_color = Color(0.509804, 0.768627, 0.792157, 1)
+outline_size = 20
+outline_color = Color(0.639216, 0.627451, 0.996078, 1)
 
 [node name="Dress Pibble" type="Node2D"]
 
@@ -19,22 +28,17 @@ offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("1_ria6u")
 
-[node name="ItemBox" type="Sprite2D" parent="."]
-position = Vector2(1636, 539.5)
-scale = Vector2(1, 0.961)
-texture = ExtResource("2_q4bhf")
-
 [node name="TextureButton" type="TextureButton" parent="."]
-offset_left = 1499.0
-offset_top = 727.0
-offset_right = 1793.0
-offset_bottom = 940.0
-texture_normal = ExtResource("3_ku6eg")
+offset_left = 809.0
+offset_top = 898.0
+offset_right = 1086.0
+offset_bottom = 1080.0
+texture_normal = ExtResource("2_7omvv")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("4_7omvv")
-node_scenes = Array[PackedScene]([ExtResource("7_ntprn"), ExtResource("6_txekd"), ExtResource("8_uywbw"), ExtResource("9_4tq6w"), ExtResource("10_gb6hn"), ExtResource("5_d84cy")])
-spawn_position = Vector2(1640, 420)
+nodes_to_cycle = Array[PackedScene]([ExtResource("5_d84cy"), ExtResource("6_txekd"), ExtResource("7_ntprn"), ExtResource("8_uywbw"), ExtResource("9_4tq6w"), ExtResource("10_gb6hn"), ExtResource("10_d84cy")])
+spawn_position = Vector2(945, 493)
 
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2(1638, 459)
@@ -42,5 +46,17 @@ position = Vector2(1638, 459)
 [node name="DressHim" parent="." instance=ExtResource("2_fbn8u")]
 position = Vector2(945, 493)
 
-[node name="SweaterPibble" parent="." instance=ExtResource("5_d84cy")]
-position = Vector2(1640, 420)
+[node name="nextSceneButton" parent="." instance=ExtResource("12_ntprn")]
+offset_left = 1146.0
+offset_top = -10.0
+offset_right = 1922.0
+offset_bottom = 290.0
+
+[node name="Label" type="Label" parent="nextSceneButton"]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 101.0
+offset_right = 700.0
+offset_bottom = 214.0
+text = "Find Pibble a home"
+label_settings = SubResource("LabelSettings_4tq6w")

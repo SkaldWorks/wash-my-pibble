@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cnb201rlh2kef"]
+[gd_scene load_steps=3 format=3 uid="uid://cnb201rlh2kef"]
 
 [ext_resource type="Texture2D" uid="uid://cyql4fvqkw5dt" path="res://Sprites/LoseWin Screens/Lose_FedWrongThing.png" id="1_dflk0"]
+[ext_resource type="PackedScene" uid="uid://dwbjg61ctbrau" path="res://Scenes/mechanic scenes/Quit.tscn" id="2_xjmra"]
 
 [node name="tummy_hurt" type="Node2D"]
 
@@ -8,3 +9,10 @@
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("1_dflk0")
+
+[node name="Quit" parent="." instance=ExtResource("2_xjmra")]
+offset_left = 1735.0
+offset_top = 23.0
+offset_right = 1886.0
+offset_bottom = 194.0
+stretch_mode = 5

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://du5ah8wmpxx0h"]
+
+[ext_resource type="Texture2D" uid="uid://1t12liqelmp" path="res://Sprites/Backgrounds/WinScreen.png" id="1_i27e2"]
+[ext_resource type="PackedScene" uid="uid://dwbjg61ctbrau" path="res://Scenes/mechanic scenes/Quit.tscn" id="2_d2snt"]
+
+[node name="WinScreen" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_i27e2")
+
+[node name="Quit" parent="." instance=ExtResource("2_d2snt")]
+offset_left = 1791.0
+offset_top = 17.0
+offset_right = 1903.0
+offset_bottom = 152.0
+stretch_mode = 5

@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://xilcyvtpopbx"]
+[gd_scene load_steps=3 format=3 uid="uid://xilcyvtpopbx"]
 
 [ext_resource type="Texture2D" uid="uid://cu2geuft5blgk" path="res://Sprites/LoseWin Screens/Lose_PibbleRunAway.png" id="1_8v30s"]
+[ext_resource type="PackedScene" uid="uid://dwbjg61ctbrau" path="res://Scenes/mechanic scenes/Quit.tscn" id="2_pmum3"]
 
 [node name="RunAway" type="Node2D"]
 
@@ -8,3 +9,10 @@
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("1_8v30s")
+
+[node name="Quit" parent="." instance=ExtResource("2_pmum3")]
+offset_left = 1751.0
+offset_top = -6.0
+offset_right = 1905.0
+offset_bottom = 190.0
+stretch_mode = 5

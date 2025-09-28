@@ -9,6 +9,7 @@ size = Vector2(175.663, 359.956)
 
 [node name="shower" type="Sprite2D"]
 texture = ExtResource("1_w0vln")
+flip_h = true
 script = ExtResource("1_ej1hv")
 default_texture = ExtResource("1_w0vln")
 held_texture = ExtResource("1_hs270")
@@ -16,6 +17,6 @@ held_texture = ExtResource("1_hs270")
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-151, 6)
-rotation = 0.602139
+position = Vector2(147, 14)
+rotation = -0.602139
 shape = SubResource("RectangleShape2D_w0vln")

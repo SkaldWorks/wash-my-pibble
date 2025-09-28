@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://8hscv8v6su0c"]
+[gd_scene load_steps=7 format=3 uid="uid://8hscv8v6su0c"]
 
 [ext_resource type="Texture2D" uid="uid://3g5luw4gs31f" path="res://Sprites/Backgrounds/Main_Menu.png" id="1_oyvb3"]
-[ext_resource type="PackedScene" path="res://Scenes/mechanic scenes/next_scene_button.tscn" id="2_3njic"]
+[ext_resource type="PackedScene" uid="uid://bg1a67ixsc62h" path="res://Scenes/mechanic scenes/next_scene_button.tscn" id="2_3njic"]
 [ext_resource type="Texture2D" uid="uid://c02a6qsyvnkxb" path="res://Sprites/UI/Button_Main.png" id="3_fne2a"]
 [ext_resource type="FontFile" uid="uid://b2ryg2i4xs1vt" path="res://Sprites/UI/Winter Feast.ttf" id="4_3njic"]
+[ext_resource type="PackedScene" uid="uid://dwbjg61ctbrau" path="res://Scenes/mechanic scenes/Quit.tscn" id="5_fne2a"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fne2a"]
 font = ExtResource("4_3njic")
@@ -35,3 +36,10 @@ text = "Play"
 label_settings = SubResource("LabelSettings_fne2a")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Quit" parent="." instance=ExtResource("5_fne2a")]
+offset_left = 1719.0
+offset_top = 27.0
+offset_right = 1894.0
+offset_bottom = 214.0
+stretch_mode = 5

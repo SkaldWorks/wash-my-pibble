@@ -1,11 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://bfqk17pxuf27"]
+[gd_scene load_steps=12 format=3 uid="uid://bfqk17pxuf27"]
 
 [ext_resource type="Texture2D" uid="uid://cymtemxtf7p6v" path="res://Sprites/Backgrounds/Washroom_TopDown.png" id="1_yc0pq"]
 [ext_resource type="PackedScene" uid="uid://c5hcptap821la" path="res://Scenes/mechanic scenes/disappear.tscn" id="2_xppsa"]
+[ext_resource type="Texture2D" uid="uid://d1mgg8aou5lw8" path="res://Sprites/UI/Item_Box.png" id="3_8rrxk"]
 [ext_resource type="PackedScene" uid="uid://cg71yju0kxc20" path="res://Scenes/mechanic scenes/soap.tscn" id="3_xppsa"]
 [ext_resource type="Texture2D" uid="uid://bcpvhdqogh7nn" path="res://Sprites/Pibble/PibbleWash.png" id="4_ogsy0"]
 [ext_resource type="PackedScene" uid="uid://cgy0mw07nn8di" path="res://Scenes/mechanic scenes/hair_dryer.tscn" id="6_033m2"]
-[ext_resource type="PackedScene" uid="uid://do1mw8dalhkn5" path="res://Scenes/mechanic scenes/shower.tscn" id="6_al1j2"]
+[ext_resource type="PackedScene" uid="uid://do1mw8dalhkn5" path="res://Sprites/Props/shower.tscn" id="6_al1j2"]
 [ext_resource type="Texture2D" uid="uid://cpg4f7ycebiyb" path="res://Sprites/Props/DryerOn.png" id="7_8qu3a"]
 [ext_resource type="Script" uid="uid://dueel007q78i8" path="res://Scripts/waterAirDry.gd" id="7_gisk5"]
 [ext_resource type="Texture2D" uid="uid://cistxos1i8qje" path="res://Sprites/Props/DryerOff.png" id="9_8rrxk"]
@@ -25,22 +26,28 @@ position = Vector2(982, 571)
 scale = Vector2(1.225, 1.225)
 texture = ExtResource("4_ogsy0")
 
+[node name="ItemBox" type="Sprite2D" parent="."]
+position = Vector2(309, 534)
+texture = ExtResource("3_8rrxk")
+
 [node name="dirt" parent="." instance=ExtResource("2_xppsa")]
 position = Vector2(981, 571)
 scale = Vector2(1.225, 1.225)
 
 [node name="Soap2" parent="." instance=ExtResource("3_xppsa")]
-position = Vector2(290, 723)
-scale = Vector2(0.53125, 0.484375)
+position = Vector2(298, 203)
+scale = Vector2(0.53, 0.53)
 clean_strength = 0.8
 
 [node name="shower" parent="." instance=ExtResource("6_al1j2")]
-position = Vector2(1587, 526)
-scale = Vector2(0.725, 0.725)
+position = Vector2(357, 489)
+scale = Vector2(0.7, 0.7)
 
 [node name="hair dryer" parent="." instance=ExtResource("6_033m2")]
-position = Vector2(486, 314)
-texture = ExtResource("7_8qu3a")
+position = Vector2(232, 813)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("9_8rrxk")
+flip_h = true
 script = ExtResource("7_gisk5")
 default_texture = ExtResource("9_8rrxk")
 held_texture = ExtResource("7_8qu3a")
@@ -48,5 +55,5 @@ held_texture = ExtResource("7_8qu3a")
 [node name="Area2D" type="Area2D" parent="hair dryer"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hair dryer/Area2D"]
-position = Vector2(-185, -76)
+position = Vector2(187.143, -84.2857)
 shape = SubResource("RectangleShape2D_vmmcu")
