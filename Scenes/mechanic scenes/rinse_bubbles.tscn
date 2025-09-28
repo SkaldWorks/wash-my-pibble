@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://7v8wbwj3n088"]
+
+[ext_resource type="Texture2D" uid="uid://cckjtg6oadyod" path="res://Sprites/Props/Soap.png" id="1_o0yxv"]
+[ext_resource type="Script" uid="uid://3ns3l8mdpj1u" path="res://Scripts/removeSoap.gd" id="2_etx6c"]
+[ext_resource type="PackedScene" uid="uid://vhinr1jx461" path="res://Scenes/mechanic scenes/waterDrops.tscn" id="3_2j40k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_etx6c"]
+size = Vector2(359, 263)
+
+[node name="rinseBubbles" type="Sprite2D"]
+texture = ExtResource("1_o0yxv")
+script = ExtResource("2_etx6c")
+paired_scene = ExtResource("3_2j40k")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(2.5, 57.5)
+shape = SubResource("RectangleShape2D_etx6c")

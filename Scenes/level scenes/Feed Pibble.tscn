@@ -1,4 +1,4 @@
-[gd_scene load_steps=124 format=3 uid="uid://bxqydea0jo8j1"]
+[gd_scene load_steps=125 format=3 uid="uid://bxqydea0jo8j1"]
 
 [ext_resource type="Texture2D" uid="uid://bg43q0eu6r5h0" path="res://Sprites/Animations/Pibble_Mal_Eat.png" id="1_1ygsp"]
 [ext_resource type="Texture2D" uid="uid://b1lb4jj7f0v00" path="res://Sprites/Backgrounds/EatingRoom.png" id="1_2a8as"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://b5y71gppep8q3" path="res://Sprites/Pibble/PibbleDISGUSTED.png" id="4_ov6ug"]
 [ext_resource type="Texture2D" uid="uid://cx267ccs5uq2t" path="res://Sprites/Animations/PibbleFatEat.png" id="5_uqybq"]
 [ext_resource type="Texture2D" uid="uid://cp3hnrfspt54t" path="res://Sprites/Pibble/PibbleDISGUSTEDFat.png" id="6_uambl"]
+[ext_resource type="Texture2D" uid="uid://c1cnjj2gpecy4" path="res://Sprites/Props/Grape_Bad.png" id="10_uqybq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qbf8q"]
 atlas = ExtResource("1_1ygsp")
@@ -856,3 +857,8 @@ respawn_time = 1.0
 [node name="goodFood" parent="." instance=ExtResource("2_0nkyv")]
 position = Vector2(368, 846)
 respawn_time = 1.0
+
+[node name="GrapeBad" type="Sprite2D" parent="."]
+position = Vector2(1491, 290)
+scale = Vector2(0.505, 0.505)
+texture = ExtResource("10_uqybq")

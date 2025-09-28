@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cckjtg6oadyod" path="res://Sprites/Props/Soap.png" id="1_yj2dl"]
 [ext_resource type="Script" uid="uid://dt1lk53w6k8xu" path="res://Scripts/appears.gd" id="2_i1mt7"]
-[ext_resource type="PackedScene" uid="uid://bg1a67ixsc62h" path="res://Scenes/mechanic scenes/next_scene_button.tscn" id="3_02fkd"]
+[ext_resource type="PackedScene" uid="uid://7v8wbwj3n088" path="res://Scenes/mechanic scenes/rinse_bubbles.tscn" id="3_02fkd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0iu24"]
 size = Vector2(389, 340)

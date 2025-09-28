@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://vhinr1jx461"]
+
+[ext_resource type="Texture2D" uid="uid://cdi3vo6tgimuo" path="res://Sprites/Props/PibbleGotWet.png" id="1_qycq7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qycq7"]
+radius = 200.564
+
+[node name="Sprite2D" type="Sprite2D"]
+texture = ExtResource("1_qycq7")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(4, -39)
+shape = SubResource("CircleShape2D_qycq7")

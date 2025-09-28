@@ -27,10 +27,9 @@ offset_top = 378.0
 offset_right = 1420.0
 offset_bottom = 624.0
 texture_normal = SubResource("CompressedTexture2D_0ss82")
-ignore_texture_size = true
-stretch_mode = 0
 
 [node name="Label" type="Label" parent="nextSceneButton"]
+layout_mode = 0
 offset_left = 12.0
 offset_top = -2.0
 offset_right = 896.0
