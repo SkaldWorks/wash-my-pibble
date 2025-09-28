@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://bxqydea0jo8j1"]
+[gd_scene load_steps=4 format=3 uid="uid://bxqydea0jo8j1"]
 
+[ext_resource type="Texture2D" uid="uid://b1lb4jj7f0v00" path="res://Sprites/Backgrounds/EatingRoom.png" id="1_2a8as"]
 [ext_resource type="PackedScene" uid="uid://cooqh81k00ndx" path="res://Scenes/mechanic scenes/food.tscn" id="2_0nkyv"]
 [ext_resource type="PackedScene" uid="uid://devsg2oahmnr8" path="res://Scenes/mechanic scenes/pibble_eat.tscn" id="2_2a8as"]
 
@@ -8,9 +9,10 @@
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 40.0
 offset_bottom = 40.0
+texture = ExtResource("1_2a8as")
 
 [node name="PibbleEat" parent="." instance=ExtResource("2_2a8as")]
-position = Vector2(776, 482)
+position = Vector2(955, 656)
 
 [node name="Food" parent="." instance=ExtResource("2_0nkyv")]
-position = Vector2(410, 804)
+position = Vector2(436, 944)

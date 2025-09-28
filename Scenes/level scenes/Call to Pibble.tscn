@@ -1,6 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://d44ap6wt78ev"]
+[gd_scene load_steps=34 format=3 uid="uid://d44ap6wt78ev"]
 
+[ext_resource type="Script" uid="uid://btbavnav5gwhv" path="res://Scenes/level scenes/PibbleCall.gd" id="1_pivk8"]
 [ext_resource type="Texture2D" uid="uid://y2t8jri553xx" path="res://Sprites/Backgrounds/PhoneRingCG.png" id="1_x1fg5"]
+[ext_resource type="PackedScene" uid="uid://btiqft2ggf33k" path="res://Scenes/mechanic scenes/text_box.tscn" id="2_3jibx"]
 [ext_resource type="Texture2D" uid="uid://c376nw0qbgki0" path="res://Sprites/Animations/PhoneRing_SpriteSheet.png" id="2_g2frj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pivk8"]
@@ -55,6 +57,66 @@ region = Rect2(0, 0, 466, 350)
 atlas = ExtResource("2_g2frj")
 region = Rect2(466, 0, 466, 350)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_sljy6"]
+atlas = ExtResource("2_g2frj")
+region = Rect2(466, 0, 466, 350)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m22xy"]
+atlas = ExtResource("2_g2frj")
+region = Rect2(932, 0, 466, 350)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_do2t7"]
+atlas = ExtResource("2_g2frj")
+region = Rect2(466, 0, 466, 350)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c7e56"]
+atlas = ExtResource("2_g2frj")
+region = Rect2(0, 0, 466, 350)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8g0ke"]
+atlas = ExtResource("2_g2frj")
+region = Rect2(466, 0, 466, 350)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t6utj"]
+atlas = ExtResource("2_g2frj")
+region = Rect2(932, 0, 466, 350)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m4d0d"]
+atlas = ExtResource("2_g2frj")
+region = Rect2(466, 0, 466, 350)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vy75w"]
+atlas = ExtResource("2_g2frj")
+region = Rect2(0, 0, 466, 350)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qyb31"]
+atlas = ExtResource("2_g2frj")
+region = Rect2(466, 0, 466, 350)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8e7tc"]
+atlas = ExtResource("2_g2frj")
+region = Rect2(932, 0, 466, 350)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qng86"]
+atlas = ExtResource("2_g2frj")
+region = Rect2(466, 0, 466, 350)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nrx8t"]
+atlas = ExtResource("2_g2frj")
+region = Rect2(0, 0, 466, 350)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gorti"]
+atlas = ExtResource("2_g2frj")
+region = Rect2(466, 0, 466, 350)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1wcc6"]
+atlas = ExtResource("2_g2frj")
+region = Rect2(932, 0, 466, 350)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0xdc1"]
+atlas = ExtResource("2_g2frj")
+region = Rect2(466, 0, 466, 350)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_sljy6"]
 animations = [{
 "frames": [{
@@ -96,13 +158,60 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_jqd7c")
+}, {
+"duration": 12.0,
+"texture": SubResource("AtlasTexture_sljy6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m22xy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_do2t7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c7e56")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8g0ke")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t6utj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m4d0d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vy75w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qyb31")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8e7tc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qng86")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nrx8t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gorti")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1wcc6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0xdc1")
 }],
 "loop": false,
-"name": &"default",
+"name": &"ring",
 "speed": 12.0
 }]
 
 [node name="CallToPibble" type="Node2D"]
+script = ExtResource("1_pivk8")
+spawn_scene = ExtResource("2_3jibx")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1920.0
@@ -112,5 +221,9 @@ texture = ExtResource("1_x1fg5")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(1587, 812)
 sprite_frames = SubResource("SpriteFrames_sljy6")
-frame = 12
-frame_progress = 1.0
+animation = &"ring"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+autostart = true
