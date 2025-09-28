@@ -1,14 +1,58 @@
 extends AnimatedSprite2D
 
+# thresholds & scene paths you can tweak in the Inspector
+@export var bad_threshold: int = 3
+@export var lose_scene_path: String = "res://scenes/lose_scene.tscn"
+
+@export var good_animation_threshold: int = 2
+@export var good_button_threshold: int = 4
+@export var spawn_button_scene: PackedScene
+
+# counts
+var bad_count: int = 0
+var good_count: int = 0
+
 func _ready() -> void:
-	# Add this node to the "Eater" group so draggable objects can detect it
 	add_to_group("Eater")
 
-# Called by draggable when it is released over the eater
+# generic on_eat (keeps backwards compatibility)
 func on_eat(item: Node) -> void:
-	if item and item.is_inside_tree():
-		# Start the eating animation
-		if animation != "":
-			play()  # plays the currently set animation
-		# Remove the dragged object
-		item.call_deferred("queue_free")
+	# default: play current animation once if set
+	if animation != "":
+		play()
+
+# called by bad food
+func on_bad_eat(item: Node) -> void:
+	bad_count += 1
+	# play eat animation if available
+	if animation != "":
+		play('badEat')
+	# check loss condition
+	if bad_count >= bad_threshold:
+		if lose_scene_path != "":
+			get_tree().change_scene_to_file(lose_scene_path)
+
+# called by good food
+func on_good_eat(item: Node) -> void:
+	good_count += 1
+	# play eat animation if available
+	if animation != "":
+		play('goodEat')
+
+	# play a special animation once when reaching the small threshold
+	if good_count == good_animation_threshold:
+		# attempt to play "happy" animation if available; fallback to current animation
+		play("FatEat")
+
+	# spawn a button when a higher threshold is reached
+	if good_count >= good_button_threshold and spawn_button_scene:
+		var btn = spawn_button_scene.instantiate()
+		# add to current scene root (simple)
+		var root = get_tree().current_scene
+		if root:
+			root.call_deferred("add_child", btn)
+			# put near eater
+			if btn is Node2D:
+				btn.global_position = global_position + Vector2(0, 60)
+		# Avoid spawning repeatedly: increase good_button_threshold so it won't spawn again, or clear the scene
+		good_button_threshold = 9999

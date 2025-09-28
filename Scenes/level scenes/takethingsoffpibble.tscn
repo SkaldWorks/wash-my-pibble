@@ -1,3 +1,18 @@
-[gd_scene load_steps=0 format=3 uid="uid://b3bn7mpg14esv"]
+[gd_scene load_steps=4 format=3 uid="uid://b3bn7mpg14esv"]
+
+[ext_resource type="Texture2D" uid="uid://c4pdve067am28" path="res://Sprites/Backgrounds/Washroom.png" id="1_wstrr"]
+[ext_resource type="Texture2D" uid="uid://dwuwcjg4kq3r5" path="res://Sprites/Pibble/PibbleMalnourished.png" id="2_rtvcb"]
+[ext_resource type="PackedScene" uid="uid://bg1a67ixsc62h" path="res://Scenes/mechanic scenes/next_scene_button.tscn" id="3_rtvcb"]
 
 [node name="Takethingsoffpibble" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_wstrr")
+
+[node name="PibbleMalnourished" type="Sprite2D" parent="."]
+position = Vector2(945, 553)
+texture = ExtResource("2_rtvcb")
+
+[node name="nextSceneButton" parent="." instance=ExtResource("3_rtvcb")]
