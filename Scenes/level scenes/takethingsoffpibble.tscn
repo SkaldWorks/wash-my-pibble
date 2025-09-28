@@ -1,10 +1,11 @@
-[gd_scene load_steps=19 format=3 uid="uid://b3bn7mpg14esv"]
+[gd_scene load_steps=20 format=3 uid="uid://b3bn7mpg14esv"]
 
 [ext_resource type="Script" uid="uid://x71irckxdkwf" path="res://Scenes/level scenes/takethingsoffpibble.gd" id="1_1ojmu"]
 [ext_resource type="Texture2D" uid="uid://c4pdve067am28" path="res://Sprites/Backgrounds/Washroom.png" id="1_wstrr"]
 [ext_resource type="Texture2D" uid="uid://db3xquol5twmp" path="res://Sprites/Pibble/CleanHim.png" id="3_dish1"]
 [ext_resource type="PackedScene" uid="uid://bg1a67ixsc62h" path="res://Scenes/mechanic scenes/next_scene_button.tscn" id="3_rtvcb"]
 [ext_resource type="Texture2D" uid="uid://c2achbdu5ud3h" path="res://Sprites/Props/CombProp.png" id="4_8lyy1"]
+[ext_resource type="Texture2D" uid="uid://d1mgg8aou5lw8" path="res://Sprites/UI/Item_Box.png" id="4_yh03h"]
 [ext_resource type="Texture2D" uid="uid://cp6br6l2lsr30" path="res://Sprites/Props/TweezersOpen.png" id="5_lvxmm"]
 [ext_resource type="Script" uid="uid://f8lhfw7cn6ou" path="res://Scripts/picks_up.gd" id="6_hhgv8"]
 [ext_resource type="Texture2D" uid="uid://ppdnwmna34uh" path="res://Sprites/Props/Tick.png" id="7_1ojmu"]
@@ -43,6 +44,11 @@ offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("1_wstrr")
 
+[node name="ItemBox" type="Sprite2D" parent="."]
+position = Vector2(256, 681)
+scale = Vector2(0.818, 0.754)
+texture = ExtResource("4_yh03h")
+
 [node name="CleanHim" type="Sprite2D" parent="."]
 position = Vector2(966, 570)
 texture = ExtResource("3_dish1")
@@ -70,18 +76,19 @@ position = Vector2(4, 20)
 shape = SubResource("CapsuleShape2D_yi3e2")
 
 [node name="TweezersOpen" type="Sprite2D" parent="."]
-position = Vector2(1353, 417)
+position = Vector2(240, 523)
 rotation = 1.5708
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("5_lvxmm")
+flip_v = true
 script = ExtResource("6_hhgv8")
-pickup_offset = Vector2(-80, -80)
+pickup_offset = Vector2(80, -80)
 
 [node name="Area2D" type="Area2D" parent="TweezersOpen"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TweezersOpen/Area2D"]
-position = Vector2(-82.5, 90)
-rotation = 0.785398
+position = Vector2(-92.5004, -92.4994)
+rotation = -0.785398
 shape = SubResource("CapsuleShape2D_arj3c")
 
 [node name="Stick" type="Sprite2D" parent="."]
@@ -111,16 +118,17 @@ position = Vector2(-4.00008, 41.3333)
 shape = SubResource("RectangleShape2D_8whtr")
 
 [node name="CombProp" type="Sprite2D" parent="."]
-position = Vector2(1360, 580)
+position = Vector2(231, 757)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("4_8lyy1")
+flip_h = true
 script = ExtResource("10_lvxmm")
 
 [node name="Area2D" type="Area2D" parent="CombProp"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CombProp/Area2D"]
-position = Vector2(-110, -92.5)
-rotation = -0.785398
+position = Vector2(117.5, -102.5)
+rotation = 0.785398
 shape = SubResource("CapsuleShape2D_hhgv8")
 
 [node name="Leaf" type="Sprite2D" parent="."]
