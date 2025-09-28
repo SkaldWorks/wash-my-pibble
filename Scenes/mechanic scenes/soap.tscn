@@ -1,17 +1,19 @@
 [gd_scene load_steps=4 format=3 uid="uid://cg71yju0kxc20"]
 
-[ext_resource type="Texture2D" uid="uid://bjwnel5syjday" path="res://Sprites/icon.svg" id="1_oqoye"]
+[ext_resource type="Texture2D" uid="uid://bafi55qq6p6m0" path="res://Sprites/Props/SpongeProp.png" id="1_aqei0"]
 [ext_resource type="Script" uid="uid://cng1nxnp4n7ji" path="res://Scripts/soap.gd" id="2_fs2ej"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fs2ej"]
-size = Vector2(130, 131)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y005f"]
+radius = 190.565
+height = 554.0
 
 [node name="soap" type="Sprite2D"]
-texture = ExtResource("1_oqoye")
+texture = ExtResource("1_aqei0")
 script = ExtResource("2_fs2ej")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, -0.5)
-shape = SubResource("RectangleShape2D_fs2ej")
+position = Vector2(5, 2)
+rotation = 0.968658
+shape = SubResource("CapsuleShape2D_y005f")

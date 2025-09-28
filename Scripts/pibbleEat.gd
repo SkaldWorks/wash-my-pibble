@@ -38,7 +38,7 @@ func on_bad_eat(item: Node) -> void:
 func on_good_eat(item: Node) -> void:
 	good_count += 1
 	# play eat animation if available
-	if good_count == good_animation_threshold:
+	if good_count >= good_animation_threshold:
 		play("fatEat")
 	else:
 		play('agoodEat')	

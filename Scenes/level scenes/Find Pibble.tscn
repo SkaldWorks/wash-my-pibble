@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://qomt03qo8qcn" path="res://Scripts/timer.gd" id="2_8jq66"]
 [ext_resource type="PackedScene" uid="uid://bg1a67ixsc62h" path="res://Scenes/mechanic scenes/next_scene_button.tscn" id="2_qvmf8"]
 [ext_resource type="Texture2D" uid="uid://bmkhiscsqf01k" path="res://Sprites/Props/BushProp.png" id="4_u6a7m"]
-[ext_resource type="Texture2D" uid="uid://ehl3a2jdoucv" path="res://Sprites/Pibble/PickHimUp.png" id="5_qvmf8"]
+[ext_resource type="Texture2D" uid="uid://ddwcklbsj33qe" path="res://Sprites/Pibble/PickHimUp.png" id="5_qvmf8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_21d6h"]
 size = Vector2(1938, 86)

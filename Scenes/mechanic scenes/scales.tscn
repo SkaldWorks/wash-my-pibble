@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c6qgylqwhxxgx"]
 
-[ext_resource type="Texture2D" uid="uid://2sxehkmwa3sx" path="res://Sprites/Pibble/Find_my_pibbles.png" id="1_4kgt2"]
+[ext_resource type="Texture2D" uid="uid://ci3ye7gntly3j" path="res://Sprites/Pibble/Find_my_pibbles.png" id="1_4kgt2"]
 [ext_resource type="Script" uid="uid://cfo0inet3u5oo" path="res://Scripts/scales.gd" id="2_jprva"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jprva"]
