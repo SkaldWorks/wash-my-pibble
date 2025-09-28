@@ -9,7 +9,6 @@ size = Vector2(4100, 4100)
 [node name="picksUp" type="Sprite2D"]
 scale = Vector2(0.02, 0.02)
 texture = ExtResource("1_wmhqd")
-flip_h = true
 script = ExtResource("2_5k0mc")
 
 [node name="Area2D" type="Area2D" parent="."]
