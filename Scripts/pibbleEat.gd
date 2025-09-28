@@ -2,7 +2,7 @@ extends AnimatedSprite2D
 
 # thresholds & scene paths you can tweak in the Inspector
 @export var bad_threshold: int = 3
-@export var lose_scene_path: String = "res://scenes/lose_scene.tscn"
+@export var lose_scene_path: String = "res://scenes/run_away.tscn"
 
 @export var good_animation_threshold: int = 2
 @export var good_button_threshold: int = 4
@@ -25,24 +25,23 @@ func on_eat(item: Node) -> void:
 func on_bad_eat(item: Node) -> void:
 	bad_count += 1
 	# play eat animation if available
-	if animation != "":
-		play('badEat')
 	# check loss condition
 	if bad_count >= bad_threshold:
 		if lose_scene_path != "":
 			get_tree().change_scene_to_file(lose_scene_path)
+	elif good_count >= 2:
+		play('badEatFat')
+	else:
+		play('badEat')
 
 # called by good food
 func on_good_eat(item: Node) -> void:
 	good_count += 1
 	# play eat animation if available
-	if animation != "":
-		play('goodEat')
-
-	# play a special animation once when reaching the small threshold
 	if good_count == good_animation_threshold:
-		# attempt to play "happy" animation if available; fallback to current animation
-		play("FatEat")
+		play("fatEat")
+	else:
+		play('agoodEat')	
 
 	# spawn a button when a higher threshold is reached
 	if good_count >= good_button_threshold and spawn_button_scene:

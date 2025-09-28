@@ -30,5 +30,4 @@ func _process(delta: float) -> void:
 		progress_bar.value = time_left
 
 func _on_timeout() -> void:
-	if lose_scene_path == "res://Scenes/level scenes/LoseScene.tscn":
-		get_tree().change_scene_to_file(lose_scene_path)
+	get_tree().change_scene_to_file(lose_scene_path)

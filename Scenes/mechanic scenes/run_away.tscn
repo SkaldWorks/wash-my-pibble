@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://xilcyvtpopbx"]
+
+[ext_resource type="Texture2D" uid="uid://dp7yr5bhyuqes" path="res://Sprites/LoseWin Screens/Lose_PibbleRunAway.png" id="1_8v30s"]
+
+[node name="RunAway" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_8v30s")
