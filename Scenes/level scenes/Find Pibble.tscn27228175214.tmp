@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://7x4kdlp1t47t"]
+[gd_scene load_steps=8 format=3 uid="uid://7x4kdlp1t47t"]
 
 [ext_resource type="Texture2D" uid="uid://bqxqumscne2xn" path="res://Sprites/Backgrounds/ForestBackground.png" id="1_hevlq"]
 [ext_resource type="PackedScene" uid="uid://c6qgylqwhxxgx" path="res://Scenes/mechanic scenes/scales.tscn" id="1_q1gdq"]
@@ -6,7 +6,6 @@
 [ext_resource type="Script" uid="uid://qomt03qo8qcn" path="res://Scripts/timer.gd" id="2_8jq66"]
 [ext_resource type="PackedScene" uid="uid://bg1a67ixsc62h" path="res://Scenes/mechanic scenes/next_scene_button.tscn" id="2_qvmf8"]
 [ext_resource type="Texture2D" uid="uid://bmkhiscsqf01k" path="res://Sprites/Props/BushProp.png" id="4_u6a7m"]
-[ext_resource type="Texture2D" uid="uid://ehl3a2jdoucv" path="res://Sprites/Pibble/PickHimUp.png" id="5_qvmf8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_21d6h"]
 size = Vector2(1938, 86)
@@ -22,7 +21,6 @@ texture = ExtResource("1_hevlq")
 
 [node name="scales" parent="." instance=ExtResource("1_q1gdq")]
 position = Vector2(341, 772)
-drag_texture = ExtResource("5_qvmf8")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 8.0
@@ -44,3 +42,5 @@ texture = ExtResource("4_u6a7m")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(964, 1038)
 shape = SubResource("RectangleShape2D_21d6h")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

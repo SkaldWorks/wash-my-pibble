@@ -28,6 +28,7 @@ position = Vector2(1361.5, 528.157)
 [node name="scales" parent="." instance=ExtResource("6_y7s2u")]
 position = Vector2(1069.5, 505.157)
 scale = Vector2(0.8, 0.8)
+bottom_y = 800.0
 
 [node name="pibbleEat" parent="." instance=ExtResource("7_scgmq")]
 position = Vector2(750, 724)
