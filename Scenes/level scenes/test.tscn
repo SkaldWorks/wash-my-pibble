@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dwr1ycean4gh3" path="res://Scenes/mechanic scenes/picksUp.tscn" id="5_xh5fj"]
 [ext_resource type="PackedScene" uid="uid://c6qgylqwhxxgx" path="res://Scenes/mechanic scenes/scales.tscn" id="6_y7s2u"]
 [ext_resource type="PackedScene" uid="uid://devsg2oahmnr8" path="res://Scenes/mechanic scenes/pibble_eat.tscn" id="7_scgmq"]
-[ext_resource type="PackedScene" uid="uid://cooqh81k00ndx" path="res://Scenes/mechanic scenes/food.tscn" id="8_hhv5l"]
+[ext_resource type="PackedScene" uid="uid://cooqh81k00ndx" path="res://Scenes/mechanic scenes/goodFood.tscn" id="8_hhv5l"]
 [ext_resource type="PackedScene" uid="uid://cqa85txlahpsg" path="res://Scenes/mechanic scenes/snap_to.tscn" id="9_mt2xe"]
 [ext_resource type="PackedScene" uid="uid://fq2gdvxbbw26" path="res://Scenes/mechanic scenes/dirt_scrub.tscn" id="10_84hcm"]
 [ext_resource type="PackedScene" uid="uid://bjcis78bmavdh" path="res://Scenes/mechanic scenes/clothes.tscn" id="10_ajccv"]

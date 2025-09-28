@@ -1,11 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://7x4kdlp1t47t"]
+[gd_scene load_steps=8 format=3 uid="uid://7x4kdlp1t47t"]
 
 [ext_resource type="Texture2D" uid="uid://bqxqumscne2xn" path="res://Sprites/Backgrounds/ForestBackground.png" id="1_hevlq"]
 [ext_resource type="PackedScene" uid="uid://c6qgylqwhxxgx" path="res://Scenes/mechanic scenes/scales.tscn" id="1_q1gdq"]
+[ext_resource type="Script" uid="uid://doft570sml3ko" path="res://Scenes/level scenes/find_pibble.gd" id="1_xm0d1"]
 [ext_resource type="Script" uid="uid://qomt03qo8qcn" path="res://Scripts/timer.gd" id="2_8jq66"]
+[ext_resource type="PackedScene" uid="uid://bg1a67ixsc62h" path="res://Scenes/mechanic scenes/next_scene_button.tscn" id="2_qvmf8"]
 [ext_resource type="Texture2D" uid="uid://bmkhiscsqf01k" path="res://Sprites/Props/BushProp.png" id="4_u6a7m"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_21d6h"]
+size = Vector2(1938, 86)
+
 [node name="FindPibble" type="Node2D"]
+script = ExtResource("1_xm0d1")
+button_scene = ExtResource("2_qvmf8")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1920.0
@@ -13,10 +20,14 @@ offset_bottom = 1080.0
 texture = ExtResource("1_hevlq")
 
 [node name="scales" parent="." instance=ExtResource("1_q1gdq")]
-position = Vector2(588, 659)
+position = Vector2(341, 772)
+min_scale = 0.5
+max_scale = 2.0
+top_y = 772.0
+bottom_y = 1080.0
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 10.0
+wait_time = 25.0
 one_shot = true
 autostart = true
 script = ExtResource("2_8jq66")
@@ -28,3 +39,9 @@ offset_bottom = 89.0
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(247, 719)
 texture = ExtResource("4_u6a7m")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(964, 1038)
+shape = SubResource("RectangleShape2D_21d6h")

@@ -1,14 +1,15 @@
 [gd_scene load_steps=4 format=3 uid="uid://cooqh81k00ndx"]
 
 [ext_resource type="Texture2D" uid="uid://bjwnel5syjday" path="res://Sprites/icon.svg" id="1_fhto3"]
-[ext_resource type="Script" uid="uid://xdluugj6a0ny" path="res://Scripts/food.gd" id="1_j4qko"]
+[ext_resource type="Script" uid="uid://7a7n8wm6ckbu" path="res://Scripts/GoodFood.gd" id="2_pw5yi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h4kkx"]
 size = Vector2(128, 128)
 
-[node name="Food" type="Sprite2D"]
+[node name="goodFood" type="Sprite2D"]
 texture = ExtResource("1_fhto3")
-script = ExtResource("1_j4qko")
+script = ExtResource("2_pw5yi")
+respawn_time = 0.0
 
 [node name="Area2D" type="Area2D" parent="."]
 
