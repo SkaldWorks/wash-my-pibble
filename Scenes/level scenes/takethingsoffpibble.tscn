@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://x71irckxdkwf" path="res://Scenes/level scenes/takethingsoffpibble.gd" id="1_1ojmu"]
 [ext_resource type="Texture2D" uid="uid://c4pdve067am28" path="res://Sprites/Backgrounds/Washroom.png" id="1_wstrr"]
-[ext_resource type="Texture2D" uid="uid://brx2cycce53or" path="res://Sprites/Pibble/CleanHim.png" id="3_dish1"]
+[ext_resource type="Texture2D" uid="uid://db3xquol5twmp" path="res://Sprites/Pibble/CleanHim.png" id="3_dish1"]
 [ext_resource type="PackedScene" uid="uid://bg1a67ixsc62h" path="res://Scenes/mechanic scenes/next_scene_button.tscn" id="3_rtvcb"]
 [ext_resource type="Texture2D" uid="uid://c2achbdu5ud3h" path="res://Sprites/Props/CombProp.png" id="4_8lyy1"]
 [ext_resource type="Texture2D" uid="uid://cp6br6l2lsr30" path="res://Sprites/Props/TweezersOpen.png" id="5_lvxmm"]

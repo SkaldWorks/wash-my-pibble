@@ -32,6 +32,7 @@ bottom_y = 800.0
 
 [node name="pibbleEat" parent="." instance=ExtResource("7_scgmq")]
 position = Vector2(750, 724)
+animation = &"goodEat"
 
 [node name="Food" parent="." instance=ExtResource("8_hhv5l")]
 position = Vector2(963.5, 813.157)

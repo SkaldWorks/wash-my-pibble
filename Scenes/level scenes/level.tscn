@@ -1,11 +1,41 @@
-[gd_scene load_steps=2 format=3 uid="uid://c0vxgi7wokhwn"]
+[gd_scene load_steps=6 format=3 uid="uid://c0vxgi7wokhwn"]
 
 [ext_resource type="PackedScene" uid="uid://bg1a67ixsc62h" path="res://Scenes/mechanic scenes/next_scene_button.tscn" id="1_70qoe"]
+[ext_resource type="Texture2D" uid="uid://3g5luw4gs31f" path="res://Sprites/Backgrounds/Main_Menu.png" id="1_gnwp7"]
+[ext_resource type="FontFile" uid="uid://b2ryg2i4xs1vt" path="res://Sprites/UI/Winter Feast.ttf" id="3_gnwp7"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0ss82"]
+load_path = "res://.godot/imported/Button_Main.png-61cc783c58cc6947656116b4cf5921da.ctex"
+
+[sub_resource type="LabelSettings" id="LabelSettings_sakha"]
+font = ExtResource("3_gnwp7")
+font_size = 186
+font_color = Color(0.780392, 0.890196, 1, 1)
+outline_size = 40
+outline_color = Color(0.631373, 0.701961, 0.929412, 1)
 
 [node name="Level" type="Node2D"]
 
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_gnwp7")
+
 [node name="nextSceneButton" parent="." instance=ExtResource("1_70qoe")]
-offset_left = 1791.0
-offset_top = 951.0
-offset_right = 1919.0
-offset_bottom = 1079.0
+offset_left = 508.0
+offset_top = 378.0
+offset_right = 1420.0
+offset_bottom = 624.0
+texture_normal = SubResource("CompressedTexture2D_0ss82")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="nextSceneButton"]
+offset_left = 12.0
+offset_top = -2.0
+offset_right = 896.0
+offset_bottom = 258.0
+text = "Play"
+label_settings = SubResource("LabelSettings_sakha")
+horizontal_alignment = 1
+vertical_alignment = 1
