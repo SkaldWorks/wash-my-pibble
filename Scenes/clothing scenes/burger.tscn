@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://rjfy3tpw7e6l"]
+
+[ext_resource type="Texture2D" uid="uid://btiv4lhy2j6ic" path="res://Sprites/Clothes/Burger.png" id="1_hemsl"]
+[ext_resource type="Script" uid="uid://dg2qnnnv0f37f" path="res://Scripts/Clothes.gd" id="2_gqnxp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hemsl"]
+size = Vector2(335, 311)
+
+[node name="Burger" type="Sprite2D"]
+texture = ExtResource("1_hemsl")
+script = ExtResource("2_gqnxp")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0.5, 63.5)
+shape = SubResource("RectangleShape2D_hemsl")

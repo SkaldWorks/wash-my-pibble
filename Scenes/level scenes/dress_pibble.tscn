@@ -1,0 +1,46 @@
+[gd_scene load_steps=12 format=3 uid="uid://begxv017xcxpe"]
+
+[ext_resource type="Texture2D" uid="uid://itrotfb6jwg5" path="res://Sprites/Backgrounds/DressingRoom.png" id="1_ria6u"]
+[ext_resource type="PackedScene" uid="uid://edyejbvfkjwd" path="res://Scenes/mechanic scenes/dress_him.tscn" id="2_fbn8u"]
+[ext_resource type="Texture2D" uid="uid://d1mgg8aou5lw8" path="res://Sprites/UI/Item_Box.png" id="2_q4bhf"]
+[ext_resource type="Texture2D" uid="uid://0m56tkpaaalg" path="res://Sprites/UI/Button_Next.png" id="3_ku6eg"]
+[ext_resource type="Script" uid="uid://b3qw8mvi8kawi" path="res://Scripts/CycleButton.gd" id="4_7omvv"]
+[ext_resource type="PackedScene" uid="uid://b3rjeuecjc4pl" path="res://Scenes/clothing scenes/sweater_pibble.tscn" id="5_d84cy"]
+[ext_resource type="PackedScene" uid="uid://cjc4rhqsjptk0" path="res://Scenes/clothing scenes/ratty_clothes.tscn" id="6_txekd"]
+[ext_resource type="PackedScene" uid="uid://nujtlew1wyxy" path="res://Scenes/clothing scenes/silly_pibble.tscn" id="7_ntprn"]
+[ext_resource type="PackedScene" uid="uid://rjfy3tpw7e6l" path="res://Scenes/clothing scenes/burger.tscn" id="8_uywbw"]
+[ext_resource type="PackedScene" uid="uid://c0hys2lx17qa7" path="res://Scenes/clothing scenes/dead_beat.tscn" id="9_4tq6w"]
+[ext_resource type="PackedScene" uid="uid://0ygl7uegampt" path="res://Scenes/clothing scenes/ralsei_pibble.tscn" id="10_gb6hn"]
+
+[node name="Dress Pibble" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_ria6u")
+
+[node name="ItemBox" type="Sprite2D" parent="."]
+position = Vector2(1636, 539.5)
+scale = Vector2(1, 0.961)
+texture = ExtResource("2_q4bhf")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 1499.0
+offset_top = 727.0
+offset_right = 1793.0
+offset_bottom = 940.0
+texture_normal = ExtResource("3_ku6eg")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("4_7omvv")
+node_scenes = Array[PackedScene]([ExtResource("7_ntprn"), ExtResource("6_txekd"), ExtResource("8_uywbw"), ExtResource("9_4tq6w"), ExtResource("10_gb6hn"), ExtResource("5_d84cy")])
+spawn_position = Vector2(1640, 420)
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(1638, 459)
+
+[node name="DressHim" parent="." instance=ExtResource("2_fbn8u")]
+position = Vector2(945, 493)
+
+[node name="SweaterPibble" parent="." instance=ExtResource("5_d84cy")]
+position = Vector2(1640, 420)

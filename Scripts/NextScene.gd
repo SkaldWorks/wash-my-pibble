@@ -31,7 +31,8 @@ func _on_pressed() -> void:
 			target_scene = "res://Scenes/level scenes/Wash Pibble.tscn"
 		5:
 			target_scene = "res://Scenes/level scenes/Dress Pibble.tscn"
-
+		6:
+			target_scene = "res://Scenes/level scenes/Win Screen.tscn"
 	if target_scene != "":
 		GameState.clicked_times += 1
 		get_tree().change_scene_to_file(target_scene)

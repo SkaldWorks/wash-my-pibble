@@ -1,6 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://uh18b5jvd037"]
+[gd_scene load_steps=6 format=3 uid="uid://uh18b5jvd037"]
 
 [ext_resource type="Script" uid="uid://2y3h5ie3kwgm" path="res://Scripts/AudioAutoload.gd" id="1_0p0a2"]
+[ext_resource type="AudioStream" uid="uid://drvrk13fqmrce" path="res://Music/Main Menu (Before Loop).ogg" id="2_najmo"]
+[ext_resource type="AudioStream" uid="uid://dpivcgkpkakgr" path="res://Music/Main Menu (Loop).ogg" id="3_vdgju"]
+[ext_resource type="AudioStream" uid="uid://bspbuybte471b" path="res://Music/In-Game (Before Loop).ogg" id="4_owrm8"]
+[ext_resource type="AudioStream" uid="uid://blaf1dihr5485" path="res://Music/In-Game (Loop).ogg" id="5_m8nfv"]
 
 [node name="AudioAutoload" type="Node2D"]
 script = ExtResource("1_0p0a2")
+first_track = ExtResource("2_najmo")
+second_track = ExtResource("3_vdgju")
+third_track = ExtResource("4_owrm8")
+fourth_track = ExtResource("5_m8nfv")

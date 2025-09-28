@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://blaf1dihr5485"
+path="res://.godot/imported/In-Game (Loop).ogg-30de3410391b09da2c3d6bfd8d2a426a.oggvorbisstr"
+
+[deps]
+
+source_file="res://Music/In-Game (Loop).ogg"
+dest_files=["res://.godot/imported/In-Game (Loop).ogg-30de3410391b09da2c3d6bfd8d2a426a.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

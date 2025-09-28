@@ -17,8 +17,7 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	if not switched_to_third:
-		var gamestate = get_node_or_null("/root/Gamestate")
-		if gamestate and gamestate.clicked_times >= 1:
+		if GameState.clicked_times >= 1:
 			switched_to_third = true
 			_play_third()
 

@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://0ygl7uegampt"]
+
+[ext_resource type="Texture2D" uid="uid://d1yst0ghhr2ur" path="res://Sprites/Clothes/RalseiPibble.png" id="1_5iyvp"]
+[ext_resource type="Script" uid="uid://dg2qnnnv0f37f" path="res://Scripts/Clothes.gd" id="2_8ftxa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6a2sm"]
+size = Vector2(354, 549)
+
+[node name="RalseiPibble" type="Sprite2D"]
+texture = ExtResource("1_5iyvp")
+script = ExtResource("2_8ftxa")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-2, -47.5)
+shape = SubResource("RectangleShape2D_6a2sm")
