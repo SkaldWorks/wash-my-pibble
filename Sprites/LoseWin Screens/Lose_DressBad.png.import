@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cu2geuft5blgk"
-path="res://.godot/imported/Lose_PibbleRunAway.png-a8fe2bf94046f884c2805dc42be125e5.ctex"
+uid="uid://id0k8nhkorwr"
+path="res://.godot/imported/Lose_DressBad.png-902e9249b316cd11c0b312b8c0915cdb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Lose_PibbleRunAway.png"
-dest_files=["res://.godot/imported/Lose_PibbleRunAway.png-a8fe2bf94046f884c2805dc42be125e5.ctex"]
+source_file="res://Sprites/LoseWin Screens/Lose_DressBad.png"
+dest_files=["res://.godot/imported/Lose_DressBad.png-902e9249b316cd11c0b312b8c0915cdb.ctex"]
 
 [params]
 

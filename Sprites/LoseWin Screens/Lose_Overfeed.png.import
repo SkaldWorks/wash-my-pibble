@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://db3xquol5twmp"
-path="res://.godot/imported/CleanHim.png-cb09d246dab65009d949720974cba4dd.ctex"
+uid="uid://ck0k64ku0eg0l"
+path="res://.godot/imported/Lose_Overfeed.png-7a06a20892dd59403e189845168d3705.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Pibble/CleanHim.png"
-dest_files=["res://.godot/imported/CleanHim.png-cb09d246dab65009d949720974cba4dd.ctex"]
+source_file="res://Sprites/LoseWin Screens/Lose_Overfeed.png"
+dest_files=["res://.godot/imported/Lose_Overfeed.png-7a06a20892dd59403e189845168d3705.ctex"]
 
 [params]
 

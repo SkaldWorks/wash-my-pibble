@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://db3xquol5twmp"
-path="res://.godot/imported/CleanHim.png-cb09d246dab65009d949720974cba4dd.ctex"
+uid="uid://chyucskbdp2ke"
+path="res://.godot/imported/PibbleKibble.png-76d4fb3506dc64a76a9268aa43e21ee9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Pibble/CleanHim.png"
-dest_files=["res://.godot/imported/CleanHim.png-cb09d246dab65009d949720974cba4dd.ctex"]
+source_file="res://Sprites/Props/PibbleKibble.png"
+dest_files=["res://.godot/imported/PibbleKibble.png-76d4fb3506dc64a76a9268aa43e21ee9.ctex"]
 
 [params]
 
