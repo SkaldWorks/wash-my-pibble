@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bfqk17pxuf27"]
+[gd_scene load_steps=16 format=3 uid="uid://bfqk17pxuf27"]
 
 [ext_resource type="Texture2D" uid="uid://cymtemxtf7p6v" path="res://Sprites/Backgrounds/Washroom_TopDown.png" id="1_yc0pq"]
 [ext_resource type="Texture2D" uid="uid://dj2ywbqsrliii" path="res://Sprites/Animations/PibbleWash.png" id="2_vmmcu"]
@@ -6,12 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://d1mgg8aou5lw8" path="res://Sprites/UI/Item_Box.png" id="3_8rrxk"]
 [ext_resource type="Script" uid="uid://dp51665ckds0l" path="res://Scenes/level scenes/washingPibble.gd" id="3_jcxyq"]
 [ext_resource type="PackedScene" uid="uid://cg71yju0kxc20" path="res://Scenes/mechanic scenes/soap.tscn" id="3_xppsa"]
-[ext_resource type="AudioStream" uid="uid://c5fvnt3hqq7u1" path="res://Effects_sound/task-complete-sfx.wav" id="6_0lhgg"]
 [ext_resource type="PackedScene" uid="uid://cgy0mw07nn8di" path="res://Scenes/mechanic scenes/hair_dryer.tscn" id="6_033m2"]
 [ext_resource type="PackedScene" uid="uid://do1mw8dalhkn5" path="res://Sprites/Props/shower.tscn" id="6_al1j2"]
 [ext_resource type="Texture2D" uid="uid://cpg4f7ycebiyb" path="res://Sprites/Props/DryerOn.png" id="7_8qu3a"]
 [ext_resource type="Script" uid="uid://dueel007q78i8" path="res://Scripts/waterAirDry.gd" id="7_gisk5"]
-[ext_resource type="AudioStream" uid="uid://dqvvibwskbo3" path="res://Effects_sound/Wash_SFX.ogg" id="7_jcxyq"]
 [ext_resource type="Texture2D" uid="uid://cistxos1i8qje" path="res://Sprites/Props/DryerOff.png" id="9_8rrxk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0lhgg"]
@@ -60,13 +58,11 @@ texture = ExtResource("3_8rrxk")
 [node name="dirt" parent="." instance=ExtResource("2_xppsa")]
 position = Vector2(981, 571)
 scale = Vector2(1.225, 1.225)
-scrub_sfx = ExtResource("6_0lhgg")
 
 [node name="Soap2" parent="." instance=ExtResource("3_xppsa")]
 position = Vector2(298, 203)
 scale = Vector2(0.53, 0.53)
 clean_strength = 0.8
-scrub_sfx = ExtResource("7_jcxyq")
 
 [node name="shower" parent="." instance=ExtResource("6_al1j2")]
 position = Vector2(269, 495)

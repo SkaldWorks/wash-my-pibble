@@ -876,9 +876,7 @@ frame = 0
 frame_progress = 0.0
 bad_threshold = 2
 lose_scene_path = "res://Scenes/mechanic scenes/tummy_hurt.tscn"
-good_animation_threshold = null
 good_button_threshold = 3
-too_much_eat = null
 spawn_button_scene = ExtResource("3_bjwoq")
 
 [node name="BoneBad" type="Sprite2D" parent="."]

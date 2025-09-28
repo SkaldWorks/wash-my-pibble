@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://7x4kdlp1t47t"]
+[gd_scene load_steps=10 format=3 uid="uid://7x4kdlp1t47t"]
 
 [ext_resource type="Texture2D" uid="uid://bqxqumscne2xn" path="res://Sprites/Backgrounds/ForestBackground.png" id="1_hevlq"]
 [ext_resource type="PackedScene" uid="uid://c6qgylqwhxxgx" path="res://Scenes/mechanic scenes/scales.tscn" id="1_q1gdq"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bg1a67ixsc62h" path="res://Scenes/mechanic scenes/next_scene_button.tscn" id="2_qvmf8"]
 [ext_resource type="Texture2D" uid="uid://bmkhiscsqf01k" path="res://Sprites/Props/BushProp.png" id="4_u6a7m"]
 [ext_resource type="Texture2D" uid="uid://ddwcklbsj33qe" path="res://Sprites/Pibble/PickHimUp.png" id="5_qvmf8"]
+[ext_resource type="Script" uid="uid://bie3slo6xx3xh" path="res://Scenes/level scenes/progress_bar.gd" id="7_k1np4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_21d6h"]
 size = Vector2(1938, 86)
@@ -34,6 +35,8 @@ lose_scene_path = "res://Scenes/mechanic scenes/run_away.tscn"
 [node name="ProgressBar" type="ProgressBar" parent="Timer"]
 offset_right = 1919.0
 offset_bottom = 89.0
+show_percentage = false
+script = ExtResource("7_k1np4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(247, 719)

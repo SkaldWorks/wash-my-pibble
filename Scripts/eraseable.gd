@@ -1,67 +1,41 @@
 extends Sprite2D
 
-@export var snap_speed: float = 8.0       # Speed for snap-back
-@export var clean_strength: float = 0.6   # Amount per second applied to target
-@export var scrub_sfx: AudioStream        # assign the sound effect in Inspector
+@export var fade_speed := 0.1                     # How fast the sprite fades
+@export var scales_scene_path: String = "res://Scenes/mechanic scenes/bubble.tscn"
 
-var is_dragging: bool = false
-var mouse_offset: Vector2 = Vector2.ZERO
-var original_position: Vector2 = Vector2.ZERO
-var over_target: Node = null              # Target currently under the cleaner
-var sfx_player: AudioStreamPlayer
+var target_alpha := 1.0                            # Current fade target
+var dirtiness := 1.0                               # 0 = fully clean, 1 = fully dirty
+var _spawned := false                              # Make sure we spawn only once
+var _scales_scene: PackedScene = preload("res://Scenes/mechanic scenes/bubble.tscn")
 
-func _ready() -> void:
-	original_position = position
 
-	# Setup AudioStreamPlayer
-	sfx_player = AudioStreamPlayer.new()
-	add_child(sfx_player)
-	sfx_player.stream = scrub_sfx
-	sfx_player.autoplay = false
-	sfx_player.loop = false  # only play once per bubble spawn
+func _process(_delta: float) -> void:
+	# Smoothly interpolate alpha toward target_alpha
+	modulate.a = lerp(modulate.a, target_alpha, fade_speed)
 
-	if has_node("Area2D"):
-		$Area2D.area_entered.connect(_on_area_entered)
-		$Area2D.area_exited.connect(_on_area_exited)
 
-func _input(event) -> void:
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
-		if event.pressed and get_rect().has_point(to_local(event.position)):
-			_start_drag(event.position)
-		elif not event.pressed:
-			_stop_drag()
-	elif event is InputEventMouseMotion and is_dragging:
-		_drag_to(get_global_mouse_position())
+func remove_dirt(amount: float) -> void:
+	# Reduce dirtiness and update fade
+	dirtiness = clamp(dirtiness - amount, 0.0, 1.0)
+	target_alpha = dirtiness
 
-func _start_drag(mouse_pos: Vector2) -> void:
-	is_dragging = true
-	mouse_offset = position - mouse_pos
+	# When fully clean, spawn bubble scene once
+	if dirtiness <= 0.0 and not _spawned:
+		_spawned = true
+		_spawn_bubbles()
 
-func _stop_drag() -> void:
-	is_dragging = false
 
-func _drag_to(mouse_pos: Vector2) -> void:
-	position = mouse_pos + mouse_offset
+func _spawn_bubbles() -> void:
+	# Instantiate the bubble scene
+	var inst = _scales_scene.instantiate()
+	if not inst:
+		return
 
-	# Only apply cleaning if over a target
-	if over_target:
-		var cleaned = false
-		if over_target.has_method("remove_dirt"):
-			over_target.call_deferred("remove_dirt", clean_strength * get_process_delta_time())
-			cleaned = true
-		# Play sound before spawning bubbles
-		if over_target.has_method("add_bubbles"):
-			if cleaned and sfx_player and not sfx_player.playing:
-				sfx_player.play()
-			over_target.call_deferred("add_bubbles", clean_strength * get_process_delta_time())
+	# Add to the current scene root
+	var root = get_tree().current_scene
+	if root:
+		root.call_deferred("add_child", inst)
 
-func _process(delta: float) -> void:
-	if not is_dragging:
-		position = position.lerp(original_position, snap_speed * delta)
-
-func _on_area_entered(area: Area2D) -> void:
-	over_target = area.get_parent()
-
-func _on_area_exited(area: Area2D) -> void:
-	if over_target == area.get_parent():
-		over_target = null
+		# If the new instance is Node2D, position it at this node's global position
+		if inst is Node2D:
+			inst.global_position = global_position

@@ -3,7 +3,7 @@ extends AnimatedSprite2D
 # thresholds & scene paths you can tweak in the Inspector
 @export var bad_threshold: int = 3
 @export var lose_scene_path: String = "res://scenes/mechanic scenes/tummy_hurt.tscn"
-@export var eater_a_lot: String = "res://scenes/run_away.tscn"
+@export var eated_a_lot: String = "res://scenes/run_away.tscn"
 
 
 @export var good_animation_threshold: int = 2
