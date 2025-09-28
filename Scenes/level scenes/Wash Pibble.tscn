@@ -1,10 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://bfqk17pxuf27"]
+[gd_scene load_steps=11 format=3 uid="uid://bfqk17pxuf27"]
 
 [ext_resource type="Texture2D" uid="uid://cymtemxtf7p6v" path="res://Sprites/Backgrounds/Washroom_TopDown.png" id="1_yc0pq"]
 [ext_resource type="PackedScene" uid="uid://c5hcptap821la" path="res://Scenes/mechanic scenes/disappear.tscn" id="2_xppsa"]
 [ext_resource type="PackedScene" uid="uid://cg71yju0kxc20" path="res://Scenes/mechanic scenes/soap.tscn" id="3_xppsa"]
 [ext_resource type="Texture2D" uid="uid://bcpvhdqogh7nn" path="res://Sprites/Pibble/PibbleWash.png" id="4_ogsy0"]
+[ext_resource type="PackedScene" uid="uid://cgy0mw07nn8di" path="res://Scenes/mechanic scenes/hair_dryer.tscn" id="6_033m2"]
 [ext_resource type="PackedScene" uid="uid://do1mw8dalhkn5" path="res://Scenes/mechanic scenes/shower.tscn" id="6_al1j2"]
+[ext_resource type="Texture2D" uid="uid://cpg4f7ycebiyb" path="res://Sprites/Props/DryerOn.png" id="7_8qu3a"]
+[ext_resource type="Script" uid="uid://dueel007q78i8" path="res://Scripts/waterAirDry.gd" id="7_gisk5"]
+[ext_resource type="Texture2D" uid="uid://cistxos1i8qje" path="res://Sprites/Props/DryerOff.png" id="9_8rrxk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vmmcu"]
+size = Vector2(262, 124)
 
 [node name="WashPibble" type="Node2D"]
 
@@ -30,3 +37,16 @@ clean_strength = 0.8
 [node name="shower" parent="." instance=ExtResource("6_al1j2")]
 position = Vector2(1587, 526)
 scale = Vector2(0.725, 0.725)
+
+[node name="hair dryer" parent="." instance=ExtResource("6_033m2")]
+position = Vector2(486, 314)
+texture = ExtResource("7_8qu3a")
+script = ExtResource("7_gisk5")
+default_texture = ExtResource("9_8rrxk")
+held_texture = ExtResource("7_8qu3a")
+
+[node name="Area2D" type="Area2D" parent="hair dryer"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hair dryer/Area2D"]
+position = Vector2(-185, -76)
+shape = SubResource("RectangleShape2D_vmmcu")

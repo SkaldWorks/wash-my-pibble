@@ -1,12 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://vhinr1jx461"]
+[gd_scene load_steps=5 format=3 uid="uid://vhinr1jx461"]
 
 [ext_resource type="Texture2D" uid="uid://cdi3vo6tgimuo" path="res://Sprites/Props/PibbleGotWet.png" id="1_qycq7"]
+[ext_resource type="Script" uid="uid://tf4bsnrdhng1" path="res://Scripts/water.gd" id="2_u33hk"]
+[ext_resource type="PackedScene" uid="uid://bg1a67ixsc62h" path="res://Scenes/mechanic scenes/next_scene_button.tscn" id="3_qtfb7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qycq7"]
 radius = 200.564
 
 [node name="Sprite2D" type="Sprite2D"]
 texture = ExtResource("1_qycq7")
+script = ExtResource("2_u33hk")
+node_to_add = ExtResource("3_qtfb7")
 
 [node name="Area2D" type="Area2D" parent="."]
 

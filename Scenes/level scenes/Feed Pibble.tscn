@@ -1,14 +1,14 @@
-[gd_scene load_steps=125 format=3 uid="uid://bxqydea0jo8j1"]
+[gd_scene load_steps=126 format=3 uid="uid://bxqydea0jo8j1"]
 
 [ext_resource type="Texture2D" uid="uid://bg43q0eu6r5h0" path="res://Sprites/Animations/Pibble_Mal_Eat.png" id="1_1ygsp"]
 [ext_resource type="Texture2D" uid="uid://b1lb4jj7f0v00" path="res://Sprites/Backgrounds/EatingRoom.png" id="1_2a8as"]
-[ext_resource type="PackedScene" uid="uid://cooqh81k00ndx" path="res://Scenes/mechanic scenes/goodFood.tscn" id="2_0nkyv"]
 [ext_resource type="PackedScene" uid="uid://devsg2oahmnr8" path="res://Scenes/mechanic scenes/pibble_eat.tscn" id="2_2a8as"]
 [ext_resource type="PackedScene" uid="uid://bg1a67ixsc62h" path="res://Scenes/mechanic scenes/next_scene_button.tscn" id="3_bjwoq"]
-[ext_resource type="PackedScene" uid="uid://xcqkoj0ja3f0" path="res://Scenes/mechanic scenes/bad_food.tscn" id="4_2ylgj"]
 [ext_resource type="Texture2D" uid="uid://b5y71gppep8q3" path="res://Sprites/Pibble/PibbleDISGUSTED.png" id="4_ov6ug"]
 [ext_resource type="Texture2D" uid="uid://cx267ccs5uq2t" path="res://Sprites/Animations/PibbleFatEat.png" id="5_uqybq"]
 [ext_resource type="Texture2D" uid="uid://cp3hnrfspt54t" path="res://Sprites/Pibble/PibbleDISGUSTEDFat.png" id="6_uambl"]
+[ext_resource type="Texture2D" uid="uid://bllrn25qsi68y" path="res://Sprites/Props/Bone_Bad.png" id="8_uqybq"]
+[ext_resource type="Texture2D" uid="uid://c8hnf5tqhccd4" path="res://Sprites/Props/Chocolate_Bad.png" id="9_uambl"]
 [ext_resource type="Texture2D" uid="uid://c1cnjj2gpecy4" path="res://Sprites/Props/Grape_Bad.png" id="10_uqybq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qbf8q"]
@@ -831,6 +831,9 @@ animations = [{
 "speed": 12.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_odk5s"]
+size = Vector2(558.614, 175.009)
+
 [node name="FeedPibble" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -849,16 +852,33 @@ lose_scene_path = "res://Scenes/mechanic scenes/tummy_hurt.tscn"
 good_button_threshold = 3
 spawn_button_scene = ExtResource("3_bjwoq")
 
-[node name="badFood" parent="." instance=ExtResource("4_2ylgj")]
-position = Vector2(1519, 843)
-scale = Vector2(0.225275, 0.200202)
-respawn_time = 1.0
+[node name="BoneBad" type="Sprite2D" parent="."]
+position = Vector2(1497, 495)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("8_uqybq")
 
-[node name="goodFood" parent="." instance=ExtResource("2_0nkyv")]
-position = Vector2(368, 846)
-respawn_time = 1.0
+[node name="Area2D" type="Area2D" parent="BoneBad"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoneBad/Area2D"]
+position = Vector2(7.5, 2.49997)
+rotation = 0.785398
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_odk5s")
+
+[node name="ChocolateBad" type="Sprite2D" parent="."]
+position = Vector2(497, 607)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("9_uambl")
+
+[node name="Area2D" type="Area2D" parent="ChocolateBad"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChocolateBad/Area2D"]
 
 [node name="GrapeBad" type="Sprite2D" parent="."]
-position = Vector2(1491, 290)
-scale = Vector2(0.505, 0.505)
+position = Vector2(992, 267)
+scale = Vector2(0.4, 0.4)
 texture = ExtResource("10_uqybq")
+
+[node name="Area2D" type="Area2D" parent="GrapeBad"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GrapeBad/Area2D"]
