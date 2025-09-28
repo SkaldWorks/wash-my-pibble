@@ -30,3 +30,6 @@ func _on_area_entered(area: Area2D) -> void:
 	if not picked_object and area.get_parent().has_method("pickup_me"):
 		picked_object = area.get_parent()
 		picked_object.call("pickup_me")
+func _process(delta: float) -> void:
+	if not is_dragging:
+		position = position.lerp(original_position, snap_speed * delta)

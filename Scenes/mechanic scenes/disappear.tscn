@@ -1,17 +1,17 @@
 [gd_scene load_steps=4 format=3 uid="uid://c5hcptap821la"]
 
-[ext_resource type="Texture2D" uid="uid://bjwnel5syjday" path="res://Sprites/icon.svg" id="1_fa5i0"]
+[ext_resource type="Texture2D" uid="uid://c31bqkshldalq" path="res://Sprites/Props/DirtyPibble.png" id="1_eudrb"]
 [ext_resource type="Script" uid="uid://domnc3m7vlj7" path="res://Scripts/eraseable.gd" id="2_iwttk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m3rhx"]
-size = Vector2(132, 135)
+size = Vector2(351, 465)
 
 [node name="disappear" type="Sprite2D"]
-texture = ExtResource("1_fa5i0")
+texture = ExtResource("1_eudrb")
 script = ExtResource("2_iwttk")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-1, 0.5)
+position = Vector2(-5.5, -3.5)
 shape = SubResource("RectangleShape2D_m3rhx")

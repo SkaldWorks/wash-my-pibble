@@ -1,10 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://bfqk17pxuf27"]
+[gd_scene load_steps=6 format=3 uid="uid://bfqk17pxuf27"]
 
 [ext_resource type="Texture2D" uid="uid://cymtemxtf7p6v" path="res://Sprites/Backgrounds/Washroom_TopDown.png" id="1_yc0pq"]
 [ext_resource type="PackedScene" uid="uid://c5hcptap821la" path="res://Scenes/mechanic scenes/disappear.tscn" id="2_xppsa"]
 [ext_resource type="PackedScene" uid="uid://cg71yju0kxc20" path="res://Scenes/mechanic scenes/soap.tscn" id="3_xppsa"]
 [ext_resource type="Texture2D" uid="uid://bcpvhdqogh7nn" path="res://Sprites/Pibble/PibbleWash.png" id="4_ogsy0"]
-[ext_resource type="Script" uid="uid://3wkmwebytcep" path="res://Scripts/dirtScrub.gd" id="5_al1j2"]
 [ext_resource type="PackedScene" uid="uid://do1mw8dalhkn5" path="res://Scenes/mechanic scenes/shower.tscn" id="6_al1j2"]
 
 [node name="WashPibble" type="Node2D"]
@@ -20,14 +19,8 @@ scale = Vector2(1.225, 1.225)
 texture = ExtResource("4_ogsy0")
 
 [node name="dirt" parent="." instance=ExtResource("2_xppsa")]
-position = Vector2(984, 603)
-scale = Vector2(1.795, 1.795)
-
-[node name="Soap" parent="." instance=ExtResource("3_xppsa")]
-position = Vector2(290, 723)
-scale = Vector2(0.53125, 0.484375)
-script = ExtResource("5_al1j2")
-clean_strength = 0.8
+position = Vector2(981, 571)
+scale = Vector2(1.225, 1.225)
 
 [node name="Soap2" parent="." instance=ExtResource("3_xppsa")]
 position = Vector2(290, 723)

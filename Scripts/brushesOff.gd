@@ -24,3 +24,6 @@ func _on_area_entered(area: Area2D) -> void:
 	# If the overlapping object has trigger_fall(), call it but don't attach
 	if obj and obj.has_method("trigger_fall"):
 		obj.call_deferred("trigger_fall")
+func _process(delta: float) -> void:
+	if not is_dragging:
+		position = position.lerp(original_position, snap_speed * delta)

@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var full_text: String = "Pibble is in the forest\nYou must save him!!!\nHe seems skittish, if you take too long he might run away!"
+@export var full_text: String = "Pibble is in the forest\nYou must save him!!!\nHe seems skittish, \nif you take too long he might run away!"
 @export var char_delay: float = 0.05
 @export var button_scene: PackedScene  # assign your TextureButton scene in Inspector
 @export var label: Label               # assign your Label node in Inspector

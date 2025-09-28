@@ -16,6 +16,8 @@ func _process(delta: float) -> void:
 	if is_dragging and over_target and over_target.is_inside_tree():
 		if over_target.has_method("apply_hold_fade"):
 			over_target.apply_hold_fade(hold_strength * delta)
+	if not is_dragging:
+		position = position.lerp(original_position, snap_speed * delta)
 
 func _on_area_entered(area: Area2D) -> void:
 	var parent = area.get_parent()
