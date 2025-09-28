@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cu2geuft5blgk"
-path="res://.godot/imported/Lose_PibbleRunAway.png-b6598d08efa8820d05c2f2081e1cdc58.ctex"
+uid="uid://ck0k64ku0eg0l"
+path="res://.godot/imported/Lose_Overfeed.png-7a06a20892dd59403e189845168d3705.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/LoseWin Screens/Lose_PibbleRunAway.png"
-dest_files=["res://.godot/imported/Lose_PibbleRunAway.png-b6598d08efa8820d05c2f2081e1cdc58.ctex"]
+source_file="res://Sprites/LoseWin Screens/Lose_Overfeed.png"
+dest_files=["res://.godot/imported/Lose_Overfeed.png-7a06a20892dd59403e189845168d3705.ctex"]
 
 [params]
 
