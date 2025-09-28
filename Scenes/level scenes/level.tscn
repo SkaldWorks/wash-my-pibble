@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c0vxgi7wokhwn"]
 
-[ext_resource type="PackedScene" path="res://Scenes/mechanic scenes/next_scene_button.tscn" id="1_70qoe"]
+[ext_resource type="PackedScene" uid="uid://bg1a67ixsc62h" path="res://Scenes/mechanic scenes/next_scene_button.tscn" id="1_70qoe"]
 
 [node name="Level" type="Node2D"]
 

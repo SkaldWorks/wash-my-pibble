@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cnb201rlh2kef"]
 
-[ext_resource type="Texture2D" uid="uid://dp7yr5bhyuqes" path="res://Sprites/LoseWin Screens/Lose_PibbleRunAway.png" id="1_dflk0"]
+[ext_resource type="Texture2D" uid="uid://cyql4fvqkw5dt" path="res://Sprites/LoseWin Screens/Lose_FedWrongThing.png" id="1_dflk0"]
 
 [node name="tummy_hurt" type="Node2D"]
 
