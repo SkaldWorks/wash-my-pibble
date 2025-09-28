@@ -40,11 +40,11 @@ scale = Vector2(0.53, 0.53)
 clean_strength = 0.8
 
 [node name="shower" parent="." instance=ExtResource("6_al1j2")]
-position = Vector2(357, 489)
+position = Vector2(269, 495)
 scale = Vector2(0.7, 0.7)
 
 [node name="hair dryer" parent="." instance=ExtResource("6_033m2")]
-position = Vector2(232, 813)
+position = Vector2(305, 828)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("9_8rrxk")
 flip_h = true
