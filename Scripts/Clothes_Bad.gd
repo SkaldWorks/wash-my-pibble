@@ -1,34 +1,75 @@
-extends TextureButton
+extends Sprite2D
 
-@export var nodes_to_cycle: Array[PackedScene] = []
+@export var snap_speed := 8.0  # Higher = faster snap
+var is_dragging := false
+var mouse_offset := Vector2.ZERO
+var original_position := Vector2.ZERO
+var snap_target: Node = null  # Current snap target we're overlapping
 
-# Internal tracking
-var current_node: Node = null
-var current_index: int = -1
-var last_position: Vector2 = Vector2.ZERO
 
 func _ready() -> void:
-	pressed.connect(_on_pressed)
+	original_position = position
+	GameState.ugly_pibble = true
+	if has_node("Area2D"):
+		$Area2D.area_entered.connect(_on_area_entered)
+		$Area2D.area_exited.connect(_on_area_exited)
 
-func _on_pressed() -> void:
-	# Remove previous node if it exists
-	if current_node and current_node.is_inside_tree():
-		last_position = current_node.global_position
-		current_node.queue_free()
+
+func _input(event) -> void:
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		if event.pressed and get_rect().has_point(to_local(event.position)):
+			_start_drag(event.position)
+		elif not event.pressed:
+			_stop_drag()
+
+	elif event is InputEventMouseMotion and is_dragging:
+		_drag_to(get_global_mouse_position())
+
+
+func _start_drag(mouse_pos: Vector2) -> void:
+	is_dragging = true
+	mouse_offset = position - mouse_pos
+
+
+func _stop_drag() -> void:
+	is_dragging = false
+
+	# Snap to target if one exists
+	if snap_target and snap_target.is_inside_tree():
+		if snap_target.has_method("on_snap"):
+			snap_target.call_deferred("on_snap", self)
+		# Optionally, leave the sprite visually over the target
+		return
+
+	# Otherwise fallback to normal snap-back
+	position = original_position
+
+
+func _drag_to(mouse_pos: Vector2) -> void:
+	position = mouse_pos + mouse_offset
+
+
+func _process(delta: float) -> void:
+	if is_dragging:
+		# Already handled in _drag_to
+		pass
+	elif snap_target and snap_target.is_inside_tree():
+		# Smoothly move toward snap target
+		position = position.lerp(snap_target.global_position, snap_speed * delta)
 	else:
-		# Use default position if no previous node
-		last_position = Vector2.ZERO
+		# Default snap-back to original position
+		position = position.lerp(original_position, snap_speed * delta)
 
-	# Move to the next index
-	current_index += 1
-	if current_index >= nodes_to_cycle.size():
-		current_index = 0  # loop back
 
-	# Instantiate the next node
-	if nodes_to_cycle.size() > 0:
-		current_node = nodes_to_cycle[current_index].instantiate()
-		get_tree().current_scene.add_child(current_node)
+func _on_area_entered(area: Area2D) -> void:
+	var parent = area.get_parent()
+	if parent == self:
+		return
+	if parent.is_in_group("SnapTarget"):
+		snap_target = parent
 
-		# Place at previous node's position
-		if current_node is Node2D:
-			current_node.global_position = last_position
+
+func _on_area_exited(area: Area2D) -> void:
+	var parent = area.get_parent()
+	if snap_target == parent:
+		snap_target = null

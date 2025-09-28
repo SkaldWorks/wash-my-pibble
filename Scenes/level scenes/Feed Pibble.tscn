@@ -876,7 +876,9 @@ frame = 0
 frame_progress = 0.0
 bad_threshold = 2
 lose_scene_path = "res://Scenes/mechanic scenes/tummy_hurt.tscn"
+good_animation_threshold = null
 good_button_threshold = 3
+too_much_eat = null
 spawn_button_scene = ExtResource("3_bjwoq")
 
 [node name="BoneBad" type="Sprite2D" parent="."]
@@ -892,7 +894,6 @@ rotation = 1.5708
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BoneBad/Area2D"]
 position = Vector2(7.5, 2.49997)
 rotation = 0.785398
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_odk5s")
 
 [node name="ChocolateBad" type="Sprite2D" parent="."]
@@ -906,7 +907,6 @@ script = ExtResource("9_odk5s")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ChocolateBad/Area2D"]
 position = Vector2(2.49988, 11.25)
 rotation = 0.785398
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_kaas7")
 
 [node name="GrapeBad" type="Sprite2D" parent="."]
@@ -932,7 +932,6 @@ script = ExtResource("14_hdsxk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PibbleButter/Area2D"]
 position = Vector2(-0.000305176, -6.25)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_hdsxk")
 
 [node name="PibbleKibble" type="Sprite2D" parent="."]
@@ -945,7 +944,6 @@ script = ExtResource("14_hdsxk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PibbleKibble/Area2D"]
 position = Vector2(10, -8.75012)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_yxj6w")
 
 [node name="PibbleMeat" type="Sprite2D" parent="."]

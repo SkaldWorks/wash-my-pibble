@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://b3bn7mpg14esv"]
+[gd_scene load_steps=22 format=3 uid="uid://b3bn7mpg14esv"]
 
 [ext_resource type="Script" uid="uid://x71irckxdkwf" path="res://Scenes/level scenes/takethingsoffpibble.gd" id="1_1ojmu"]
 [ext_resource type="Texture2D" uid="uid://c4pdve067am28" path="res://Sprites/Backgrounds/Washroom.png" id="1_wstrr"]
@@ -11,9 +11,11 @@
 [ext_resource type="Texture2D" uid="uid://ppdnwmna34uh" path="res://Sprites/Props/Tick.png" id="7_1ojmu"]
 [ext_resource type="Script" uid="uid://0h2ha38a0ufj" path="res://Scripts/pickMeUp.gd" id="8_yh03h"]
 [ext_resource type="Texture2D" uid="uid://0mv2d6cj7mb" path="res://Sprites/Props/Stick.png" id="9_vcmgc"]
+[ext_resource type="AudioStream" uid="uid://dxsjvvceiii87" path="res://Effects_sound/Bug_Pluck_SFX.ogg" id="10_040at"]
 [ext_resource type="Texture2D" uid="uid://dxjfo3jek14m0" path="res://Sprites/Props/Leaf.png" id="10_dlsge"]
 [ext_resource type="Script" uid="uid://cn5toqvgdcgxw" path="res://Scripts/brushesOff.gd" id="10_lvxmm"]
 [ext_resource type="Script" uid="uid://7sj78khn6f3a" path="res://Scripts/dropMe.gd" id="12_hhgv8"]
+[ext_resource type="AudioStream" uid="uid://bmrvv486r5dv5" path="res://Effects_sound/Leaf_SFX.ogg" id="13_vcmgc"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yi3e2"]
 radius = 16.0
@@ -82,6 +84,7 @@ texture = ExtResource("5_lvxmm")
 flip_v = true
 script = ExtResource("6_hhgv8")
 pickup_offset = Vector2(80, -80)
+pickup_sfx = ExtResource("10_040at")
 
 [node name="Area2D" type="Area2D" parent="TweezersOpen"]
 
@@ -122,6 +125,7 @@ scale = Vector2(0.4, 0.4)
 texture = ExtResource("4_8lyy1")
 flip_h = true
 script = ExtResource("10_lvxmm")
+fall_sfx = ExtResource("13_vcmgc")
 
 [node name="Area2D" type="Area2D" parent="CombProp"]
 

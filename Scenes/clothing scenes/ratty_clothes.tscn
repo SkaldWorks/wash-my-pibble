@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cjc4rhqsjptk0"]
 
 [ext_resource type="Texture2D" uid="uid://dh8as15h8a14m" path="res://Sprites/Clothes/RattyClothes.png" id="1_pyxia"]
-[ext_resource type="Script" uid="uid://dg2qnnnv0f37f" path="res://Scripts/Clothes.gd" id="2_3ex16"]
+[ext_resource type="Script" uid="uid://bocl0s6l5tnsn" path="res://Scripts/Clothes_Bad.gd" id="2_3ex16"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3s00c"]
 size = Vector2(315, 287)

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://c0hys2lx17qa7"]
 
 [ext_resource type="Texture2D" uid="uid://dyepe5u7736k7" path="res://Sprites/Clothes/DeadBeat.png" id="1_slvn7"]
-[ext_resource type="Script" uid="uid://dg2qnnnv0f37f" path="res://Scripts/Clothes.gd" id="2_ichrh"]
+[ext_resource type="Script" uid="uid://bocl0s6l5tnsn" path="res://Scripts/Clothes_Bad.gd" id="2_ichrh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bhai5"]
 size = Vector2(329, 432)

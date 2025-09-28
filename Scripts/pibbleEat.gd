@@ -2,10 +2,13 @@ extends AnimatedSprite2D
 
 # thresholds & scene paths you can tweak in the Inspector
 @export var bad_threshold: int = 3
-@export var lose_scene_path: String = "res://scenes/run_away.tscn"
+@export var lose_scene_path: String = "res://scenes/mechanic scenes/tummy_hurt.tscn"
+@export var eater_a_lot: String = "res://scenes/run_away.tscn"
+
 
 @export var good_animation_threshold: int = 2
 @export var good_button_threshold: int = 4
+@export var too_much_eat: int = 20
 @export var spawn_button_scene: PackedScene
 
 # counts
@@ -55,3 +58,5 @@ func on_good_eat(item: Node) -> void:
 				btn.global_position = global_position + Vector2(0, 60)
 		# Avoid spawning repeatedly: increase good_button_threshold so it won't spawn again, or clear the scene
 		good_button_threshold = 9999
+	if good_count >= too_much_eat:
+		get_tree().change_scene_to_file(eated_a_lot)

@@ -1,0 +1,10 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://cgih0s2sxhct8"]
+
+[ext_resource type="FontFile" uid="uid://b2ryg2i4xs1vt" path="res://Sprites/UI/Winter Feast.ttf" id="1_to0j0"]
+
+[resource]
+line_spacing = -40.0
+font = ExtResource("1_to0j0")
+font_size = 130
+outline_size = 50
+outline_color = Color(0.200799, 0.330763, 0.242816, 1)

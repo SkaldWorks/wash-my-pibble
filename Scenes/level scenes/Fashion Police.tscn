@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxfpc5a3hy5tb"]
+
+[ext_resource type="Texture2D" uid="uid://id0k8nhkorwr" path="res://Sprites/LoseWin Screens/Lose_DressBad.png" id="1_px2w4"]
+[ext_resource type="PackedScene" uid="uid://dwbjg61ctbrau" path="res://Scenes/mechanic scenes/Quit.tscn" id="2_24gqn"]
+[ext_resource type="LabelSettings" uid="uid://cgih0s2sxhct8" path="res://Sprites/UI/big and fat.tres" id="3_7g3q5"]
+
+[node name="FashionPolice" type="TextureRect"]
+texture = ExtResource("1_px2w4")
+
+[node name="Quit" parent="." instance=ExtResource("2_24gqn")]
+layout_mode = 0
+offset_left = 1728.0
+offset_top = 15.0
+offset_right = 1913.0
+offset_bottom = 167.0
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 308.0
+offset_top = -10.0
+offset_right = 1597.0
+offset_bottom = 357.0
+text = "He got caught by the 
+fashion police :("
+label_settings = ExtResource("3_7g3q5")
+horizontal_alignment = 1
+vertical_alignment = 1
